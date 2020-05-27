@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{4ED906FF-D9F3-48B2-B5DF-E90510D3F264}</ProjectGuid>
+    <ProjectGuid>{9EDEABB9-47F2-4C11-AB28-DA7F614C984A}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>SysOSFL.EN</RootNamespace>
-    <AssemblyName>SysOSFL.EN</AssemblyName>
+    <RootNamespace>SysOSFL.DAL</RootNamespace>
+    <AssemblyName>SysOSFL.DAL</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -41,10 +41,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Administrador.cs" />
-    <Compile Include="Donante.cs" />
-    <Compile Include="JefeProject.cs" />
+    <Compile Include="AdministradorDAL.cs" />
+    <Compile Include="BDComun.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SysOSFL.EN\SysOSFL.EN.csproj">
+      <Project>{4ed906ff-d9f3-48b2-b5df-e90510d3f264}</Project>
+      <Name>SysOSFL.EN</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
