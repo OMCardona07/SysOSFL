@@ -91,11 +91,11 @@ namespace SysOSFL.DAL
             using (IDbConnection _conn = BDComun.ObtenerConexion())
             {
                 _conn.Open();
-                IDbCommand commando = BDComun.ObtenerComandos(string.Format("select * from Administracion where Id={0}", pIdAdministrador), _conn);
+                IDbCommand commando = BDComun.ObtenerComandos(string.Format("select * from Administrador where IdAdmin={0}", pIdAdministrador), _conn);
                 IDataReader reader = commando.ExecuteReader();
                 while (reader.Read())
                 {
-                    obj.IdAdmin = reader.GetInt64(0);
+                    ////obj.IdAdmin = reader.GetInt64(0);
                     obj.Nombres = reader.GetString(1);
                     obj.Apellidos = reader.GetString(2);
                     obj.Dui = reader.GetString(3);
@@ -115,7 +115,7 @@ namespace SysOSFL.DAL
             using (IDbConnection _conn = BDComun.ObtenerConexion())
             {
                 _conn.Open();
-                IDbCommand commando = BDComun.ObtenerComandos(string.Format("select * from Administracion where Nombre='{0}'", pAdministrador), _conn);
+                IDbCommand commando = BDComun.ObtenerComandos(string.Format("select * from Administrador where Nombres='{0}'", pAdministrador), _conn);
                 IDataReader reader = commando.ExecuteReader();
                 while (reader.Read())
                 {
@@ -132,40 +132,6 @@ namespace SysOSFL.DAL
                 _conn.Close();
             }
             return ListaAdministracion;
-        }
-
-        public int EliminarAdministrador(Int64 pIdAdministrador)
-        {
-            IDbConnection _conn = BDComun.ObtenerConexion();
-            _conn.Open();
-            IDbCommand comando = BDComun.ObtenerComandos(string.Format("delete from Administrador where Id = {0}", pIdAdministrador)
-                , _conn);
-            int resultado = comando.ExecuteNonQuery();
-            _conn.Close();
-            return resultado;
-        }
-
-        public static int ModificarAdministrador(Administrador pAdministrador)
-        {
-            using (IDbConnection conn = BDComun.ObtenerConexion())
-            {
-                conn.Open();
-                string _Sql = "UPDATE Administracion SET Nombres=@Nombres,Apellidos=@Apellidos,Dui=@Dui," +
-                    "Email=@Email,Telefono=@Telefono,NomUsu=@NomUsu,Pass=@Pass WHERE IdAdministrador=@IdAdministrador";
-
-                SqlCommand comando = new SqlCommand(_Sql, conn as SqlConnection);
-                comando.Parameters.AddWithValue("@Id", pAdministrador.IdAdmin);
-                comando.Parameters.AddWithValue("@Nombre", pAdministrador.Nombres);
-                comando.Parameters.AddWithValue("@Apellido", pAdministrador.Apellidos);
-                comando.Parameters.AddWithValue("@Dui", pAdministrador.Dui);
-                comando.Parameters.AddWithValue("@Email", pAdministrador.Email);
-                comando.Parameters.AddWithValue("@Telefono", pAdministrador.Telefono);
-                comando.Parameters.AddWithValue("@NomUsu", pAdministrador.NomUsu);
-                comando.Parameters.AddWithValue("@Pass", pAdministrador.Pass);
-                int resultado = comando.ExecuteNonQuery();
-                conn.Close();
-                return resultado;
-            }
         }
     }
 }

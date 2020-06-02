@@ -2,6 +2,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="Contenido" runat="server">
+    <link rel="stylesheet" href="CSS\estilos1.css"/>
     <section class="form-registro">
             <h4>FORMULARIO REGISTRO</h4>
             <h3>* Campos obligatorios</h3>
@@ -19,6 +20,6 @@
             <h5>*</h5>
             <asp:TextBox ID="txtPass" runat="server" placeholder="Ingrese su nombre de contraseña" class="controles" TextMode="Password"></asp:TextBox>
             <%--<input id="txtPass" type="password" placeholder="Ingrese su contraseña" class="controles"/>--%>
-            <%--<asp:Button class="btn" ID="Button1" runat="server" OnClick="Button1_Click" Text="Guardar" />--%>
+            <asp:Button class="btn" ID="btnGuardar" runat="server" OnClick="btnGuardar_Click" Text="Guardar" />
     </section>
 </asp:Content>

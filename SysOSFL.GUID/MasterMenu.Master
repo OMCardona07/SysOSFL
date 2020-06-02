@@ -4,7 +4,6 @@
 
 <html>
 <head runat="server">
-    <link rel="stylesheet" href="CSS\estilos1.css"/>
     <!-- STYLES CSS -->
         <link rel="stylesheet" href="CSS\estilos.css"/>
     <!-- BOX ICONS CSS-->
@@ -34,11 +33,11 @@
                             <i class='bx bx-grid-alt nav__icon'></i>
                             <span class="nav__text">Inicio</span>
                         </a>
-                        <a href="AgregarUsuario.aspx" class="nav__link">
+                        <a href="AgregarAdministrador.aspx" class="nav__link">
                             <i class='bx bx-user nav__icon' ></i>
                             <span class="nav__text">Usuarios</span>
                         </a>
-                        <a href="#" class="nav__link">
+                        <a href="Administrar.aspx" class="nav__link">
                             <i class='bx bx-bookmark nav__icon'></i>
                             <span class="nav__text">Proyectos</span>
                         </a>

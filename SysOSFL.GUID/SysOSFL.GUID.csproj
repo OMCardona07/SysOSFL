@@ -67,6 +67,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Administrar.aspx" />
     <Content Include="AgregarAdministrador.aspx" />
     <Content Include="CSS\estilos.css" />
     <Content Include="CSS\estilos1.css" />
@@ -78,6 +79,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Administrar.aspx.cs">
+      <DependentUpon>Administrar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrar.aspx.designer.cs">
+      <DependentUpon>Administrar.aspx</DependentUpon>
+    </Compile>
     <Compile Include="AgregarAdministrador.aspx.cs">
       <DependentUpon>AgregarAdministrador.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -104,7 +112,16 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\SysOSFL.BL\SysOSFL.BL.csproj">
+      <Project>{9a8a68b8-c2e0-40fe-8442-44e55e5318ef}</Project>
+      <Name>SysOSFL.BL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SysOSFL.EN\SysOSFL.EN.csproj">
+      <Project>{4ed906ff-d9f3-48b2-b5df-e90510d3f264}</Project>
+      <Name>SysOSFL.EN</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

@@ -21,14 +21,16 @@ namespace SysOSFL.BL
             return AdministradorDAL.ModificarAdministrador(pAdminin);
         }
 
-        public List<Administrador> ObtenerTodosAdministracion()
-        {
-            return DAL.ObtenerTodosAdministracion();
-        }
         public int EliminarAdministracion(Int64 pId)
         {
-            return DAL.EliminarAdministracion(pId);
+            return DAL.EliminarAdministrador(pId);
         }
+
+        public List<Administrador> ObtenerTodosAdministracion()
+        {
+            return DAL.ObtenerAdministradores();
+        }
+        
 
         public Administrador ObtenerAdministracionporId(Int64 pId)
         {
@@ -38,15 +40,6 @@ namespace SysOSFL.BL
         public List<Administrador> ObtenerAdministracionporNombre(string pAdministracion)
         {
             return DAL.ObtenerAdministracionporNombre(pAdministracion);
-        }
-        
-        public List<Administrador> MostrarAdministracion()
-        {
-            return AdministradorDAL.MostrarAdministracion();
-        }
-        public List<Administrador> BuscarAdministracionPorNombre(string pNombre)
-        {
-            return AdministradorDAL.BuscarAdministracionPorNombre(pNombre);
         }
     }
 }
