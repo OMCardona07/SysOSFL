@@ -67,12 +67,35 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AgregarAdministrador.aspx" />
+    <Content Include="CSS\estilos.css" />
+    <Content Include="CSS\estilos1.css" />
+    <Content Include="CSS\EstilosRegistro.css" />
+    <Content Include="CSS\EstilosRegistroUsu.css" />
+    <Content Include="IMG\fondo-registro.jpg" />
+    <Content Include="IMG\logo.svg" />
+    <Content Include="JS\funcion.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AgregarAdministrador.aspx.cs">
+      <DependentUpon>AgregarAdministrador.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AgregarAdministrador.aspx.designer.cs">
+      <DependentUpon>AgregarAdministrador.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MasterMenu.Master.cs">
+      <DependentUpon>MasterMenu.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterMenu.Master.designer.cs">
+      <DependentUpon>MasterMenu.Master</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="MasterMenu.Master" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -81,6 +104,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
