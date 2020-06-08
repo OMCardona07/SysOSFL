@@ -16,9 +16,9 @@ namespace SysOSFL.BL
             return DAL.AgregarAdmin(pAdmin);
         }
 
-        public int ModificarAdministracion(Administrador pAdminin)
+        public int ModificarAdministrador(Administrador pAdmin)
         {
-            return AdministradorDAL.ModificarAdministrador(pAdminin);
+            return AdministradorDAL.ModificarAdministracion(pAdmin);
         }
 
         public int EliminarAdministracion(Int64 pId)

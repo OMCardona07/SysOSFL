@@ -12,7 +12,7 @@ body {
 }
 
 .form-registro {
-    width: 450px;
+    width: 800px;
     background: #24303c;
     padding: 30px;
     margin: auto;
@@ -29,7 +29,7 @@ body {
     }
 
 .controles {
-    width: 100%;
+    width: 50%;
     background: #24303c;
     padding: 10px;
     border-radius: 4px;
@@ -37,8 +37,8 @@ body {
     border: 1px solid #1f53c5;
     font-family: Calibri;
     font-size: 18px;
-    height:10px;
     color: white;
+    position:center;
 }
 
 /*.controls::placeholder {
@@ -46,7 +46,7 @@ body {
 }*/
 
 .btn {
-    width: 100%;
+    width: 50%;
     background: #1f53c5;
     border: none;
     padding: 12px;

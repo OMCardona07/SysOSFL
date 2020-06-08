@@ -71,6 +71,7 @@
     <Content Include="AgregarAdministrador.aspx" />
     <Content Include="CSS\estilos.css" />
     <Content Include="CSS\estilos1.css" />
+    <Content Include="CSS\EstilosBuscar.css" />
     <Content Include="CSS\EstilosRegistro.css" />
     <Content Include="CSS\EstilosRegistroUsu.css" />
     <Content Include="IMG\fondo-registro.jpg" />

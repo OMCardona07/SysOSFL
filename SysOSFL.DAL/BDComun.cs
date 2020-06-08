@@ -8,7 +8,7 @@ using System.Data;
 
 namespace SysOSFL.DAL
 {
-    class BDComun
+    public class BDComun
     {
         private static string _conn = @"Data Source=.;Initial Catalog=BDSysOSFDL;Integrated Security=True";
         public static IDbConnection ObtenerConexion()

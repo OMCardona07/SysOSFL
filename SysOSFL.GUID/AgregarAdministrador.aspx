@@ -4,22 +4,18 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="Contenido" runat="server">
     <link rel="stylesheet" href="CSS\estilos1.css"/>
     <section class="form-registro">
-            <h4>FORMULARIO REGISTRO</h4>
-            <h3>* Campos obligatorios</h3>
-            <br />
-            <h5>*</h5>
-            <asp:TextBox class="controles" ID="txtNombre" runat="server" placeholder="Ingrese su nombre" ToolTip="Este campo es obligatorio"></asp:TextBox>
-            <h5>*</h5>
-            <asp:TextBox ID="txtApellidos" runat="server" placeholder="Ingrese su apellido" class="controles"></asp:TextBox>
-            <h5>*</h5>
-            <asp:TextBox ID="txtDui" runat="server" placeholder="Ingrese su número de DUI" class="controles"></asp:TextBox>
-            <asp:TextBox ID="txtEmail" runat="server" placeholder="Ingrese su Correo electronico" class="controles"></asp:TextBox>
-            <asp:TextBox ID="txtTelefono" runat="server" placeholder="Ingrese su número de telefono" class="controles"></asp:TextBox>
-            <h5>*</h5>
-            <asp:TextBox ID="txtNomUsu" runat="server" placeholder="Ingrese su nombre de usuario" class="controles"></asp:TextBox>
-            <h5>*</h5>
-            <asp:TextBox ID="txtPass" runat="server" placeholder="Ingrese su nombre de contraseña" class="controles" TextMode="Password"></asp:TextBox>
-            <%--<input id="txtPass" type="password" placeholder="Ingrese su contraseña" class="controles"/>--%>
-            <asp:Button class="btn" ID="btnGuardar" runat="server" OnClick="btnGuardar_Click" Text="Guardar" />
+        <h4>FORMULARIO REGISTRO</h4>
+        <h3>* Campos obligatorios</h3>
+        <br />
+        <br />
+        <asp:TextBox class="controles" ID="txtNombre" runat="server" placeholder="Ingrese su nombre *" ToolTip="Este campo es obligatorio"></asp:TextBox>
+        <asp:TextBox ID="txtApellidos" runat="server" placeholder="Ingrese su apellido *" class="controles"></asp:TextBox>
+        <asp:TextBox ID="txtDui" runat="server" placeholder="Ingrese su número de DUI *" class="controles"></asp:TextBox>
+        <asp:TextBox ID="txtEmail" runat="server" placeholder="Ingrese su Correo electronico" class="controles"></asp:TextBox>
+        <asp:TextBox ID="txtTelefono" runat="server" placeholder="Ingrese su número de telefono" class="controles"></asp:TextBox>
+        <asp:TextBox ID="txtNomUsu" runat="server" placeholder="Ingrese su nombre de usuario *" class="controles"></asp:TextBox>
+        <asp:TextBox ID="txtPass" runat="server" placeholder="Ingrese su nombre de contraseña *" class="controles" TextMode="Password"></asp:TextBox>
+        <%--<input id="txtPass" type="password" placeholder="Ingrese su contraseña" class="controles"/>--%>
+        <asp:Button class="btn" ID="btnGuardar" runat="server" OnClick="btnGuardar_Click" Text="Guardar" />
     </section>
 </asp:Content>
