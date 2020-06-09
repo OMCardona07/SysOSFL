@@ -21,6 +21,7 @@
                     <asp:BoundColumn DataField="Telefono" HeaderText="Telefono" />
                     <asp:BoundColumn DataField="NomUsu" HeaderText="Nombre de Usuario" />
                     <asp:BoundColumn DataField="Pass" HeaderText="Contraseña" />
+                    <asp:BoundColumn DataField="Credencial" HeaderText="Credencial" />
                     <asp:TemplateColumn>
                         <ItemTemplate>
                             <asp:Button ID="btnDetalles" runat="server" OnClick="btnDetalles_Click" Text="Ver Detalles" />

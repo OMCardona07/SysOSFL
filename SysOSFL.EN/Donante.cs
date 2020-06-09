@@ -15,12 +15,13 @@ namespace SysOSFL.EN
         public string Telefono { get; set; }
         public string NomUsu { get; set; }
         public string Pass { get; set; }
+        public string Credencial { get; set; }
 
 
         public Donante() { }
 
         public Donante(Int64 pIdDonante, string pNombreEm, string pNrc, string pEmail,
-            string pTelefono, string pNomUsu, string pPass)
+            string pTelefono, string pNomUsu, string pPass, string pCredencial)
         {
             IdDonante = pIdDonante;
             NombreEm = pNombreEm;
@@ -29,6 +30,7 @@ namespace SysOSFL.EN
             Telefono = pTelefono;
             NomUsu = pNomUsu;
             Pass = pPass;
+            Credencial = pCredencial;
         }
     }
 }

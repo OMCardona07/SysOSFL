@@ -16,12 +16,13 @@ namespace SysOSFL.EN
         public string Telefono { get; set; }
         public string NomUsu { get; set; }
         public string Pass { get; set; }
+        public string Credencial { get; set; }
 
 
         public Administrador() { }
 
         public Administrador(Int64 pIdAdmin, string pNombres, string pApellidos, string pDui, string pEmail,
-            string pTelefono, string pNomUsu, string pPass)
+            string pTelefono, string pNomUsu, string pPass, string pCredencial)
         {
             IdAdmin = pIdAdmin;
             Nombres = pNombres;
@@ -31,6 +32,7 @@ namespace SysOSFL.EN
             Telefono = pTelefono;
             NomUsu = pNomUsu;
             Pass = pPass;
+            Credencial = pCredencial;
         }
     }
 }

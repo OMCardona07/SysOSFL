@@ -36,10 +36,5 @@ namespace SysOSFL.BL
         {
             return DAL.ObtenerAdministracionporId(pId);
         }
-
-        public List<Administrador> ObtenerAdministracionporNombre(string pAdministracion)
-        {
-            return DAL.ObtenerAdministracionporNombre(pAdministracion);
-        }
     }
 }

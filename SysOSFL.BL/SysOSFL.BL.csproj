@@ -43,6 +43,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AdministradorBL.cs" />
+    <Compile Include="DonanteBL.cs" />
+    <Compile Include="JefeProyectBL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

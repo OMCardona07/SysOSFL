@@ -43,6 +43,8 @@
   <ItemGroup>
     <Compile Include="AdministradorDAL.cs" />
     <Compile Include="BDComun.cs" />
+    <Compile Include="DonanteDAL.cs" />
+    <Compile Include="JefeProyectDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -1,8 +1,13 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterMenu.Master" AutoEventWireup="true" CodeBehind="AgregarAdministrador.aspx.cs" Inherits="SysOSFL.GUID.AgregarAdministrador" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <style type="text/css">
+        #Select1 {
+            width: 106px;
+        }
+    </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="Contenido" runat="server">
-    <link rel="stylesheet" href="CSS\estilos1.css"/>
+    <link rel="stylesheet" type="text/css" href="CSS\EstilosRegistro.css"/>
     <section class="form-registro">
         <h4>FORMULARIO REGISTRO</h4>
         <h3>* Campos obligatorios</h3>
@@ -16,6 +21,10 @@
         <asp:TextBox ID="txtNomUsu" runat="server" placeholder="Ingrese su nombre de usuario *" class="controles"></asp:TextBox>
         <asp:TextBox ID="txtPass" runat="server" placeholder="Ingrese su nombre de contraseña *" class="controles" TextMode="Password"></asp:TextBox>
         <%--<input id="txtPass" type="password" placeholder="Ingrese su contraseña" class="controles"/>--%>
+        <asp:DropDownList ID="ddCredencial" runat="server" Height="24px" Width="177px">
+            <asp:ListItem Value="Administador">Administrador</asp:ListItem>
+            <asp:ListItem Value="Jefe de Proyecto">Jefe de Proyecto</asp:ListItem>
+        </asp:DropDownList>
         <asp:Button class="btn" ID="btnGuardar" runat="server" OnClick="btnGuardar_Click" Text="Guardar" />
     </section>
 </asp:Content>
