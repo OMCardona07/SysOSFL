@@ -15,7 +15,8 @@ namespace SysOSFL.DAL
         {
             IDbConnection _conn = BDComun.ObtenerConexion();
             _conn.Open();
-            IDbCommand comando = BDComun.ObtenerComandos(string.Format("INSERT INTO JefeProyect(Nombres,Apellidos,Dui,Email,Telefono,NomUsu,Pass,Credencial)" +
+            IDbCommand comando = BDComun.ObtenerComandos(string.Format("INSERT INTO JefeProyect(Nombres_J,Apellidos_J,Dui_J," +
+                "Email_J,Telefono_J,NomUsu_J,Pass_J,Credencial_J)" +
                 " Values('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}')",
                 pJefe.Nombres, pJefe.Apellidos, pJefe.Dui, pJefe.Email, pJefe.Telefono, pJefe.NomUsu, pJefe.Pass, pJefe.Credencial), _conn);
             int resultado = comando.ExecuteNonQuery();
@@ -29,19 +30,19 @@ namespace SysOSFL.DAL
             using (IDbConnection conn = BDComun.ObtenerConexion())
             {
                 conn.Open();
-                string _Sql = "UPDATE JefeProyect SET Nombres=@Nombres,Apellidos=@Apellidos,Dui=@Dui,Email=@Email," +
-                    " Telefono=@Telefono,NomUsu=@NomUsu,Pass=@Pass,Credencial=@Credencial WHERE IdJefeProyect=@IdJefeProyect";
+                string _Sql = "UPDATE JefeProyect SET Nombres_J=@Nombres_J,Apellidos_J=@Apellidos_J,Dui_J=@Dui_J,Email_J=@Email_J," +
+                    " Telefono_J=@Telefono_J,NomUsu_J=@NomUsu_J,Pass_J=@Pass_J,Credencial_J=@Credencial_J WHERE IdJefe=@IdJefe";
 
                 SqlCommand comando = new SqlCommand(_Sql, conn as SqlConnection);
-                comando.Parameters.AddWithValue("@IdAdmin", pJefe.IdJefeProyect);
-                comando.Parameters.AddWithValue("@Nombres", pJefe.Nombres);
-                comando.Parameters.AddWithValue("@Apellidos", pJefe.Apellidos);
-                comando.Parameters.AddWithValue("@Dui", pJefe.Dui);
-                comando.Parameters.AddWithValue("@Email", pJefe.Email);
-                comando.Parameters.AddWithValue("@Telefono", pJefe.Telefono);
-                comando.Parameters.AddWithValue("@NomUsu", pJefe.NomUsu);
-                comando.Parameters.AddWithValue("@Pass", pJefe.Pass);
-                comando.Parameters.AddWithValue("@Credencial", pJefe.Credencial);
+                comando.Parameters.AddWithValue("@IdJefe", pJefe.IdJefeProyect);
+                comando.Parameters.AddWithValue("@Nombres_J", pJefe.Nombres);
+                comando.Parameters.AddWithValue("@Apellidos_J", pJefe.Apellidos);
+                comando.Parameters.AddWithValue("@Dui_J", pJefe.Dui);
+                comando.Parameters.AddWithValue("@Email_J", pJefe.Email);
+                comando.Parameters.AddWithValue("@Telefono_J", pJefe.Telefono);
+                comando.Parameters.AddWithValue("@NomUsu_J", pJefe.NomUsu);
+                comando.Parameters.AddWithValue("@Pass_J", pJefe.Pass);
+                comando.Parameters.AddWithValue("@Credencial_J", pJefe.Credencial);
                 int resultado = comando.ExecuteNonQuery();
                 conn.Close();
                 return resultado;
@@ -54,7 +55,7 @@ namespace SysOSFL.DAL
         {
             IDbConnection _conn = BDComun.ObtenerConexion();
             _conn.Open();
-            IDbCommand comando = BDComun.ObtenerComandos(string.Format("DELETE FROM JefeProyect WHERE IdJefeProyect = {0}", pIdJefeProyect)
+            IDbCommand comando = BDComun.ObtenerComandos(string.Format("DELETE FROM JefeProyect WHERE IdJefe = {0}", pIdJefeProyect)
                 , _conn);
             int resultado = comando.ExecuteNonQuery();
             _conn.Close();
@@ -96,7 +97,7 @@ namespace SysOSFL.DAL
             using (IDbConnection _conn = BDComun.ObtenerConexion())
             {
                 _conn.Open();
-                IDbCommand commando = BDComun.ObtenerComandos(string.Format("select * from JefeProyect where IdJefeProyect={0}", _listaJefes), _conn);
+                IDbCommand commando = BDComun.ObtenerComandos(string.Format("select * from JefeProyect where IdJefe={0}", _listaJefes), _conn);
                 IDataReader reader = commando.ExecuteReader();
                 while (reader.Read())
                 {
