@@ -15,7 +15,8 @@ namespace SysOSFL.DAL
         {
             IDbConnection _conn = BDComun.ObtenerConexion();
             _conn.Open();
-            IDbCommand comando = BDComun.ObtenerComandos(string.Format("INSERT INTO Administrador(Nombres,Apellidos,Dui,Email,Telefono,NomUsu,Pass,Credencial)" +
+            IDbCommand comando = BDComun.ObtenerComandos(string.Format("INSERT INTO Administrador(Nombres_A,Apellidos_A,Dui_A," +
+                "Email_A,Telefono_A,NomUsu_A,Pass_A,Credencial_A)" +
                 " Values('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}')",
                 pAdmin.Nombres, pAdmin.Apellidos, pAdmin.Dui, pAdmin.Email, pAdmin.Telefono, pAdmin.NomUsu, pAdmin.Pass, pAdmin.Credencial), _conn);
             int resultado = comando.ExecuteNonQuery();
@@ -29,19 +30,19 @@ namespace SysOSFL.DAL
             using (IDbConnection conn = BDComun.ObtenerConexion())
             {
                 conn.Open();
-                string _Sql = "UPDATE Administrador SET Nombres=@Nombres,Apellidos=@Apellidos,Dui=@Dui,Email=@Email," +
-                    " Telefono=@Telefono,NomUsu=@NomUsu,Pass=@Pass,Credencial=@Credencial WHERE IdAdmin=@IdAdmin";
+                string _Sql = "UPDATE Administrador SET Nombres_A=@Nombres_A,Apellidos_A=@Apellidos_A,Dui_A=@Dui_A,Email_A=@Email_A," +
+                    " Telefono_A=@Telefono_A,NomUsu_A=@NomUsu_ANomUsu_A,Pass_A=@Pass_A,Credencial_A=@Credencial_A WHERE IdAdmin=@IdAdmin";
 
                 SqlCommand comando = new SqlCommand(_Sql, conn as SqlConnection);
                 comando.Parameters.AddWithValue("@IdAdmin", pAdmin.IdAdmin);
-                comando.Parameters.AddWithValue("@Nombres", pAdmin.Nombres);
-                comando.Parameters.AddWithValue("@Apellidos", pAdmin.Apellidos);
-                comando.Parameters.AddWithValue("@Dui", pAdmin.Dui);
-                comando.Parameters.AddWithValue("@Email", pAdmin.Email);
-                comando.Parameters.AddWithValue("@Telefono", pAdmin.Telefono);
-                comando.Parameters.AddWithValue("@NomUsu", pAdmin.NomUsu);
-                comando.Parameters.AddWithValue("@Pass", pAdmin.Pass);
-                comando.Parameters.AddWithValue("@Credencial", pAdmin.Credencial);
+                comando.Parameters.AddWithValue("@Nombres_A", pAdmin.Nombres);
+                comando.Parameters.AddWithValue("@Apellidos_A", pAdmin.Apellidos);
+                comando.Parameters.AddWithValue("@Dui_A", pAdmin.Dui);
+                comando.Parameters.AddWithValue("@Email_A", pAdmin.Email);
+                comando.Parameters.AddWithValue("@Telefono_A", pAdmin.Telefono);
+                comando.Parameters.AddWithValue("@NomUsu_A", pAdmin.NomUsu);
+                comando.Parameters.AddWithValue("@Pass_A", pAdmin.Pass);
+                comando.Parameters.AddWithValue("@Credencial_A", pAdmin.Credencial);
                 int resultado = comando.ExecuteNonQuery();
                 conn.Close();
                 return resultado;
