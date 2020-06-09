@@ -15,8 +15,9 @@ namespace SysOSFL.DAL
         {
             IDbConnection _conn = BDComun.ObtenerConexion();
             _conn.Open();
-            IDbCommand comando = BDComun.ObtenerComandos(string.Format("INSERT INTO Donante(NombreEm,Nrc,Email,Telefono,NomUsu,Pass,Credencial)" +
-                " Values('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}')",
+            IDbCommand comando = BDComun.ObtenerComandos(string.Format("INSERT INTO Donante(NombreEm,N_Emp,Email_E," +
+                "Telefono_E,NomUsu_E,Pass_E,Credencial_E)" +
+                " Values('{0}','{1}','{2}','{3}','{4}','{5}','{6}')",
                 pDonante.NombreEm, pDonante.Nrc, pDonante.Email, pDonante.Telefono, pDonante.NomUsu, pDonante.Pass, pDonante.Credencial), _conn);
             int resultado = comando.ExecuteNonQuery();
 
@@ -29,18 +30,18 @@ namespace SysOSFL.DAL
             using (IDbConnection conn = BDComun.ObtenerConexion())
             {
                 conn.Open();
-                string _Sql = "UPDATE Donante SET NombreEm=@NombreEm,Nrc=@Nrc,Email=@Email," +
-                    " Telefono=@Telefono,NomUsu=@NomUsu,Pass=@Pass,Credencial=@Credencial WHERE IdDonante=@IdDonante";
+                string _Sql = "UPDATE Donante SET NombreEm=@NombreEm,N_Emp=@N_Emp,Email_E=@Email_E," +
+                    " Telefono_E=@Telefono_E,NomUsu_E=@NomUsu_E,Pass_E=@Pass_E,Credencial_E=@Credencial_E WHERE IdDonante=@IdDonante";
 
                 SqlCommand comando = new SqlCommand(_Sql, conn as SqlConnection);
                 comando.Parameters.AddWithValue("@IdDonante", pDonante.IdDonante);
                 comando.Parameters.AddWithValue("@NombreEm", pDonante.NombreEm);
-                comando.Parameters.AddWithValue("@Nrc", pDonante.Nrc);
-                comando.Parameters.AddWithValue("@Email", pDonante.Email);
-                comando.Parameters.AddWithValue("@Telefono", pDonante.Telefono);
-                comando.Parameters.AddWithValue("@NomUsu", pDonante.NomUsu);
-                comando.Parameters.AddWithValue("@Pass", pDonante.Pass);
-                comando.Parameters.AddWithValue("@Credencial", pDonante.Credencial);
+                comando.Parameters.AddWithValue("@N_Emp", pDonante.Nrc);
+                comando.Parameters.AddWithValue("@Email_E", pDonante.Email);
+                comando.Parameters.AddWithValue("@Telefono_E", pDonante.Telefono);
+                comando.Parameters.AddWithValue("@NomUsu_E", pDonante.NomUsu);
+                comando.Parameters.AddWithValue("@Pass_E", pDonante.Pass);
+                comando.Parameters.AddWithValue("@Credencial_E", pDonante.Credencial);
                 int resultado = comando.ExecuteNonQuery();
                 conn.Close();
                 return resultado;
