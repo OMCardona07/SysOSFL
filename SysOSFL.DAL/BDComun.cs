@@ -10,7 +10,7 @@ namespace SysOSFL.DAL
 {
     public class BDComun
     {
-        private static string _conn = @"Data Source=.;Initial Catalog=BDSysOSFDL;Integrated Security=True";
+        private static string _conn = @"Data Source=.;Initial Catalog=SysOSFL;Integrated Security=True";
         public static IDbConnection ObtenerConexion()
         {
             return new SqlConnection(_conn);
