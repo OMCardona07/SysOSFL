@@ -35,16 +35,16 @@
                         </a>
                         <a href="AgregarAdministrador.aspx" class="nav__link">
                             <i class='bx bx-user nav__icon' ></i>
-                            <span class="nav__text">Usuarios</span>
+                            <span class="nav__text">Agregar Usuarios</span>
                         </a>
                         <a href="Administrar.aspx" class="nav__link">
                             <i class='bx bx-bookmark nav__icon'></i>
-                            <span class="nav__text">Proyectos</span>
+                            <span class="nav__text">Actualizar Usuarios</span>
                         </a>
-                        <!--
-                        <a href="#" class="nav__link">
+                        
+                        <a href="RegistroDondante.aspx" class="nav__link">
                             <i class='bx bx-bell nav__icon' ></i>
-                            <span class="nav__text">Notification</span>
+                            <span class="nav__text">Agregar Donante</span>
                         </a>
                         <a href="#" class="nav__link">
                             <i class='bx bx-heart nav__icon'></i>
@@ -54,7 +54,7 @@
                             <i class='bx bx-message-rounded nav__icon' ></i>
                             <span class="nav__text">Chat</span>
                         </a> 
-                    	-->                
+                    	                
                     </ul>
                 </div>
                 <a href="#" class="nav__link">           
