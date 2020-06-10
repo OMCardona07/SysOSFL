@@ -1,0 +1,41 @@
+
+*{margin:0;padding:0;box-sizing:border-box;font-size:0;}  
+nav a{
+      text-decoration:none;
+      color:inherit;
+      font-size:16px;
+      font-family: calibri;
+      }
+            
+nav li{
+      display:inline-block;
+      width:150px;
+      height:30px;
+      padding:5px 10px;
+      background-color:#12192C;
+      border:1px solid #fff;
+      text-align:center;
+      color:#fff;
+      position:relative;
+}
+            
+nav li:hover{
+      background-color:#F5A623;
+      color:#000;
+      }
+            
+nav li>ul{
+      display:none;
+      }
+
+nav li:hover>ul{
+      display:block;
+      position:absolute;
+      top:30px;
+      left:0px;
+}
+
+nav {
+    text-align: center;
+    padding: 20px;
+}

@@ -11,7 +11,7 @@ namespace SysOSFL.BL
     public class DonanteBL
     {
         DonanteDAL DAL = new DonanteDAL();
-        public int AgregarAdmin(Donante pDonante)
+        public int AgregarDonante(Donante pDonante)
         {
             return DAL.AgregarDonante(pDonante);
         }

@@ -6,23 +6,36 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using SysOSFL.EN;
 using SysOSFL.BL;
+using System.Windows.Forms;
 
-namespace SysOSFL.GUID
+namespace SysOSFL.GUID.GUID_Admin
 {
-    public partial class RegistroDondante : System.Web.UI.Page
+    public partial class RegistroDonante : System.Web.UI.Page
     {
         Donante _donante = new Donante();
         DonanteBL _donanteBL = new DonanteBL();
+
+        private void Limpiar()
+        {
+            txtNombre.Text = "";
+            txtNrc.Text = "";
+            txtEmail.Text = "";
+            txtTelefono.Text = "";
+            txtNomUsu.Text = "";
+            txtPass.Text = "";
+        }
         protected void Page_Load(object sender, EventArgs e)
         {
-            txtCredencial.Text = "Dondante";
+            txtCredencial.Text = "Donante";
+            txtCredencial.ReadOnly = true;
         }
 
         protected void btnGuardar_Click(object sender, EventArgs e)
         {
-            if (txtNombreEm.Text != "" && txtNrc.Text != "" && txtNomUsu.Text != "" && txtPass.Text != "")
+            if (txtNombre.Text != "" && txtNrc.Text != ""
+                && txtNomUsu.Text != "" && txtPass.Text != "" && txtCredencial.Text != "")
             {
-                _donante.NombreEm = txtNombreEm.Text;
+                _donante.NombreEm = txtNombre.Text;
                 _donante.Nrc = txtNrc.Text;
                 _donante.Telefono = txtTelefono.Text;
                 _donante.Email = txtEmail.Text;
@@ -31,15 +44,8 @@ namespace SysOSFL.GUID
                 _donante.Credencial = txtCredencial.Text;
 
                 _donanteBL.AgregarDonante(_donante);
-                string script = "alert('El administrador se ha registrado exitosamente')";
-                ScriptManager.RegisterStartupScript(this, typeof(Page), "Exito", script, true);
-
-                txtNombreEm.Text = "";
-                txtNrc.Text = "";
-                txtTelefono.Text = "";
-                txtEmail.Text = "";
-                txtNomUsu.Text = "";
-                txtPass.Text = "";
+                MessageBox.Show("EL DONANTE SE HA REGISTRADO CORRECTAMENTE");
+                Limpiar();
             }
         }
     }
