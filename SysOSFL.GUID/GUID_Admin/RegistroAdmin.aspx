@@ -20,7 +20,7 @@
             </li>
             
             <li><a href="#">Actualizar de Datos</a>
-                <ul><li><a href="#">Actualizar Usuario</a></li>
+                <ul><li><a href="ActualizacionAdmin.aspx">Actualizar Usuario</a></li>
                 <li><a href="#">Actualizar Donante</a></li></ul>
             </li>
             <li><a href="#">Proyectos</a>

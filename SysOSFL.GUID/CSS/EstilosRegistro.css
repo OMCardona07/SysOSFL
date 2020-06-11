@@ -51,6 +51,13 @@ body {
     font-size: 16px;
 }
 
-.rb {
-    color:white;
+.btn1 {
+    width: 10%;
+    background: #1f53c5;
+}
+
+.lbl {
+    color: white;
+    font-family: Calibri;
+    font-size: 16px;
 }

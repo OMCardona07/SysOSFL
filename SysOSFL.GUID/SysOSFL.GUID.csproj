@@ -69,6 +69,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Administrar.aspx" />
+    <Content Include="AdministrarDonante.aspx" />
     <Content Include="AgregarAdministrador.aspx" />
     <Content Include="CSS\estilos.css" />
     <Content Include="CSS\estilos1.css" />
@@ -76,6 +77,7 @@
     <Content Include="CSS\EstilosRegistro.css" />
     <Content Include="CSS\EstilosRegistroUsu.css" />
     <Content Include="CSS\estilo_menuH.css" />
+    <Content Include="GUID_Admin\ActualizacionAdmin.aspx" />
     <Content Include="GUID_Admin\RegistroAdmin.aspx" />
     <Content Include="GUID_Admin\RegistroDonante.aspx" />
     <Content Include="GUID_Admin\RegistroJefe.aspx" />
@@ -93,12 +95,26 @@
     <Compile Include="Administrar.aspx.designer.cs">
       <DependentUpon>Administrar.aspx</DependentUpon>
     </Compile>
+    <Compile Include="AdministrarDonante.aspx.cs">
+      <DependentUpon>AdministrarDonante.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdministrarDonante.aspx.designer.cs">
+      <DependentUpon>AdministrarDonante.aspx</DependentUpon>
+    </Compile>
     <Compile Include="AgregarAdministrador.aspx.cs">
       <DependentUpon>AgregarAdministrador.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="AgregarAdministrador.aspx.designer.cs">
       <DependentUpon>AgregarAdministrador.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GUID_Admin\ActualizacionAdmin.aspx.cs">
+      <DependentUpon>ActualizacionAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUID_Admin\ActualizacionAdmin.aspx.designer.cs">
+      <DependentUpon>ActualizacionAdmin.aspx</DependentUpon>
     </Compile>
     <Compile Include="GUID_Admin\RegistroAdmin.aspx.cs">
       <DependentUpon>RegistroAdmin.aspx</DependentUpon>

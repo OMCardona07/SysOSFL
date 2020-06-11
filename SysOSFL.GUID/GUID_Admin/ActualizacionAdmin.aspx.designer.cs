@@ -7,12 +7,21 @@
 // </generado automáticamente>
 //------------------------------------------------------------------------------
 
-namespace SysOSFL.GUID
+namespace SysOSFL.GUID.GUID_Admin
 {
 
 
-    public partial class Administrar
+    public partial class ActualizacionAdmin
     {
+
+        /// <summary>
+        /// Control form1.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
         /// Control txtId.
@@ -51,13 +60,13 @@ namespace SysOSFL.GUID
         protected global::System.Web.UI.WebControls.DataGrid gvUsuarios;
 
         /// <summary>
-        /// Control txtIdUsu.
+        /// Control txtIdAdmin.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtIdUsu;
+        protected global::System.Web.UI.WebControls.TextBox txtIdAdmin;
 
         /// <summary>
         /// Control txtNombre.
@@ -121,15 +130,6 @@ namespace SysOSFL.GUID
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtPass;
-
-        /// <summary>
-        /// Control txtCredencial.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtCredencial;
 
         /// <summary>
         /// Control btnModificar.

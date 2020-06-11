@@ -11,7 +11,7 @@ namespace SysOSFL.GUID
 {
 
 
-    public partial class Administrar
+    public partial class AdministrarDonante
     {
 
         /// <summary>
@@ -33,58 +33,49 @@ namespace SysOSFL.GUID
         protected global::System.Web.UI.WebControls.Button btnBuscar;
 
         /// <summary>
-        /// Control pnlUsuarios.
+        /// Control pnlDonante.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel pnlUsuarios;
+        protected global::System.Web.UI.WebControls.Panel pnlDonante;
 
         /// <summary>
-        /// Control gvUsuarios.
+        /// Control gvDonante.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DataGrid gvUsuarios;
+        protected global::System.Web.UI.WebControls.DataGrid gvDonante;
 
         /// <summary>
-        /// Control txtIdUsu.
+        /// Control txtIdDonante.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtIdUsu;
+        protected global::System.Web.UI.WebControls.TextBox txtIdDonante;
 
         /// <summary>
-        /// Control txtNombre.
+        /// Control txtNombreEm.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtNombre;
+        protected global::System.Web.UI.WebControls.TextBox txtNombreEm;
 
         /// <summary>
-        /// Control txtApellidos.
+        /// Control txtNrc.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtApellidos;
-
-        /// <summary>
-        /// Control txtDui.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtDui;
+        protected global::System.Web.UI.WebControls.TextBox txtNrc;
 
         /// <summary>
         /// Control txtEmail.

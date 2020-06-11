@@ -21,7 +21,7 @@
                 <div>
                     <a href="#" class="nav__logo">
                         <img src="IMG/logo.svg" alt="" class="nav__logo-icon">
-                        <span class="nav__logo-text">MENU</span>
+                        <span class="nav__logo-text">INICIO</span>
                     </a>
     
                     <div class="nav__toggle" id="nav-toggle">
@@ -29,10 +29,6 @@
                     </div>
     
                     <ul class="nav__list">
-                        <a href="#" class="nav__link active">
-                            <i class='bx bx-grid-alt nav__icon'></i>
-                            <span class="nav__text">Inicio</span>
-                        </a>
                         <a href="AgregarAdministrador.aspx" class="nav__link">
                             <i class='bx bx-user nav__icon' ></i>
                             <span class="nav__text">Agregar Usuarios</span>
@@ -46,14 +42,26 @@
                             <i class='bx bx-bell nav__icon' ></i>
                             <span class="nav__text">Agregar Donante</span>
                         </a>
-                        <a href="#" class="nav__link">
+                        <a href="AdministrarDonante.aspx" class="nav__link">
                             <i class='bx bx-heart nav__icon'></i>
-                            <span class="nav__text">Favorites</span>
+                            <span class="nav__text">Actualizar Donante</span>
                         </a>
                         <a href="#" class="nav__link">
                             <i class='bx bx-message-rounded nav__icon' ></i>
-                            <span class="nav__text">Chat</span>
-                        </a> 
+                            <span class="nav__text">Agregar Proyecto</span>
+                        </a>
+                        <a href="#" class="nav__link">
+                            <i class='bx bx-message-rounded nav__icon' ></i>
+                            <span class="nav__text">Actualizar proyecto</span>
+                        </a>
+                        <a href="#" class="nav__link">
+                            <i class='bx bx-message-rounded nav__icon' ></i>
+                            <span class="nav__text">Agregar Donaciones</span>
+                        </a>
+                        <a href="#" class="nav__link active">
+                            <i class='bx bx-grid-alt nav__icon'></i>
+                            <span class="nav__text">Actualizar Donaciones</span>
+                        </a>
                     	                
                     </ul>
                 </div>

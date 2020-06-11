@@ -15,7 +15,7 @@ namespace SysOSFL.GUID
         DonanteBL _donanteBL = new DonanteBL();
         protected void Page_Load(object sender, EventArgs e)
         {
-            txtCredencial.Text = "Dondante";
+            txtCredencial.Text = "Donante";
         }
 
         protected void btnGuardar_Click(object sender, EventArgs e)

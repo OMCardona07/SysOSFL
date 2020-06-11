@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterMenu.Master" AutoEventWireup="true" CodeBehind="Administrar.aspx.cs" Inherits="SysOSFL.GUID.Administrar" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterMenu.Master" AutoEventWireup="true" CodeBehind="AdministrarDonante.aspx.cs" Inherits="SysOSFL.GUID.AdministrarDonante" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="Contenido" runat="server">
@@ -10,18 +10,17 @@
             <asp:Button Id="btnBuscar" runat="server" Text="Buscar" OnClick="btnBuscar_Click" />
             <br />
             <br />
-            <asp:Panel runat="server" ID="pnlUsuarios">
-            <asp:DataGrid ID="gvUsuarios" runat="server" AutoGenerateColumns="False" DataKeyNames="IdAdmin" >
+            <asp:Panel runat="server" ID="pnlDonante">
+            <asp:DataGrid ID="gvDonante" runat="server" AutoGenerateColumns="False" DataKeyNames="IdDonante" >
                 <Columns>
-                    <asp:BoundColumn DataField="Id" HeaderText="Id" />
-                    <asp:BoundColumn DataField="Nombres" HeaderText="Nombres" />
-                    <asp:BoundColumn DataField="Apellidos" HeaderText="Apellidos" />
-                    <asp:BoundColumn DataField="Dui" HeaderText="N° de Identificacion" />
-                    <asp:BoundColumn DataField="Email" HeaderText="E-Mail" />
-                    <asp:BoundColumn DataField="Telefono" HeaderText="Telefono" />
-                    <asp:BoundColumn DataField="NomUsu" HeaderText="Nombre de Usuario" />
-                    <asp:BoundColumn DataField="Pass" HeaderText="Contraseña" />
-                    <asp:BoundColumn DataField="Credencial" HeaderText="Credencial" />
+                    <asp:BoundColumn DataField="IdDonante" HeaderText="Id" />
+                    <asp:BoundColumn DataField="NombreEm" HeaderText="Nombre de Institucion" />
+                    <asp:BoundColumn DataField="N_Emp" HeaderText="N° de Identificacion" />
+                    <asp:BoundColumn DataField="Email_E" HeaderText="E-Mail" />
+                    <asp:BoundColumn DataField="Telefono_E" HeaderText="Telefono" />
+                    <asp:BoundColumn DataField="NomUsu_E" HeaderText="Nombre de Usuario" />
+                    <asp:BoundColumn DataField="Pass_E" HeaderText="Contraseña" />
+                    <asp:BoundColumn DataField="Credencial_E" HeaderText="Credencial" />
                     <asp:TemplateColumn>
                         <ItemTemplate>
                             <asp:Button ID="btnDetalles" runat="server" OnClick="btnDetalles_Click" Text="Ver Detalles" />
@@ -38,21 +37,16 @@
         </div>
         <br />
         <br />
-        <asp:TextBox class="controles" ID="txtIdUsu" runat="server" placeholder="" ToolTip=""></asp:TextBox>
-        <asp:TextBox class="controles" ID="txtNombre" runat="server" placeholder="Ingrese su nombre *" ToolTip="Este campo es obligatorio"></asp:TextBox>
-        <asp:TextBox ID="txtApellidos" runat="server" placeholder="Ingrese su apellido *" class="controles"></asp:TextBox>
-        <asp:TextBox ID="txtDui" runat="server" placeholder="Ingrese su número de DUI *" class="controles"></asp:TextBox>
+        <asp:TextBox class="controles" ID="txtIdDonante" runat="server" placeholder="" ToolTip=""></asp:TextBox>
+        <asp:TextBox class="controles" ID="txtNombreEm" runat="server" placeholder="Ingrese su nombre *" ToolTip=""></asp:TextBox>
+        <asp:TextBox ID="txtNrc" runat="server" placeholder="Ingrese su número de DUI *" class="controles"></asp:TextBox>
         <asp:TextBox ID="txtEmail" runat="server" placeholder="Ingrese su Correo electronico" class="controles"></asp:TextBox>
         <asp:TextBox ID="txtTelefono" runat="server" placeholder="Ingrese su número de telefono" class="controles"></asp:TextBox>
         <asp:TextBox ID="txtNomUsu" runat="server" placeholder="Ingrese su nombre de usuario *" class="controles"></asp:TextBox>
         <asp:TextBox ID="txtPass" runat="server" placeholder="Ingrese su nombre de contraseña *" class="controles"></asp:TextBox>
         <asp:TextBox ID="txtCredencial" runat="server" class="controles" ReadOnly="true"></asp:TextBox>
         <asp:Button class="btn" ID="btnModificar" runat="server" OnClick="btnModificar_Click" Text="Modificar" />
-        <asp:Button class="btn" ID="btnEliminar" runat="server" OnClick="btnEliminar_Click1" Text="Eliminar" OnClientClick="return confirm(&quot;Realmente desea eliminar el registro&quot;);" />
+        <asp:Button class="btn" ID="btnEliminar" runat="server" OnClick="btnEliminar_Click" Text="Eliminar" OnClientClick="return confirm(&quot;Realmente desea eliminar el registro&quot;);" />
 
     </section>
-
-    
 </asp:Content>
-
-

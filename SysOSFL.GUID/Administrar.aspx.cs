@@ -25,11 +25,13 @@ namespace SysOSFL.GUID
             txtNomUsu.Text = "";
             txtPass.Text = "";
             txtId.Text = "";
+            txtIdUsu.Text = "";
+            txtCredencial.Text = "";
         }
 
         private void Solo_Lectura()
         {
-            txtIdAdmin.ReadOnly = true;
+            txtIdUsu.ReadOnly = true;
             txtNombre.ReadOnly = true;
             txtApellidos.ReadOnly = true;
             txtDui.ReadOnly = true;
@@ -41,7 +43,8 @@ namespace SysOSFL.GUID
 
         private void Obtener()
         {
-            SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM Administrador WHERE Dui LIKE'" + txtId.Text + "%'", cn);
+            SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM Administrador WHERE Dui LIKE'" + txtId.Text + "%'UNION" +
+                " SELECT * FROM JefeProyect WHERE Dui LIKE'" + txtId.Text + "%'", cn);
             DataTable dt = new DataTable();
             da.Fill(dt);
 
@@ -51,8 +54,11 @@ namespace SysOSFL.GUID
 
         AdministradorBL _adminBL = new AdministradorBL();
         Administrador _admin = new Administrador();
+        JefeProject _jefe = new JefeProject();
+        JefeProyectBL _jefeBL = new JefeProyectBL();
+
         string id;
-        public SqlConnection cn = new SqlConnection("Data Source =.; Initial Catalog = BDSysOSFDL; Integrated Security = True");
+        public SqlConnection cn = new SqlConnection("Data Source =.; Initial Catalog = SysOSFL; Integrated Security = True");
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -81,7 +87,8 @@ namespace SysOSFL.GUID
             txtTelefono.Text = gvUsuarios.Items[rowind].Cells[5].Text;
             txtNomUsu.Text = gvUsuarios.Items[rowind].Cells[6].Text;
             txtPass.Text = gvUsuarios.Items[rowind].Cells[7].Text;
-            txtIdAdmin.Text = gvUsuarios.Items[rowind].Cells[0].Text;
+            txtCredencial.Text = gvUsuarios.Items[rowind].Cells[8].Text;
+            txtIdUsu.Text = gvUsuarios.Items[rowind].Cells[0].Text;
 
             txtNombre.ReadOnly = false;
             txtApellidos.ReadOnly = false;
@@ -94,41 +101,84 @@ namespace SysOSFL.GUID
 
         protected void btnModificar_Click(object sender, EventArgs e)
         {
-            if (txtNombre.Text != "")
+            if (txtNombre.Text != "" && txtApellidos.Text != "" && txtDui.Text != ""
+                && txtNomUsu.Text != "" && txtPass.Text != "")
             {
-                _admin.IdAdmin = Convert.ToInt64(txtIdAdmin.Text);
-                _admin.Nombres = txtNombre.Text;
-                _admin.Apellidos = txtApellidos.Text;
-                _admin.Dui = txtDui.Text;
-                _admin.Email = txtEmail.Text;
-                _admin.Telefono = txtTelefono.Text;
-                _admin.NomUsu = txtNomUsu.Text;
-                _admin.Pass = txtPass.Text;
+                if (txtCredencial.Text == "Administrador")
+                {
+                    _admin.Nombres = txtNombre.Text;
+                    _admin.Apellidos = txtApellidos.Text;
+                    _admin.Dui = txtDui.Text;
+                    _admin.Telefono = txtTelefono.Text;
+                    _admin.Email = txtEmail.Text;
+                    _admin.NomUsu = txtNomUsu.Text;
+                    _admin.Pass = txtPass.Text;
+                    _admin.Credencial = txtCredencial.Text;
+                    _admin.IdAdmin = Convert.ToInt64(txtIdUsu.Text);
 
+                    _adminBL.ModificarAdministrador(_admin);
+                    string script = "alert('El administrador se ha modificado exitosamente')";
+                    ScriptManager.RegisterStartupScript(this, typeof(Page), "Exito", script, true);
+                    Obtener();
+                    Limpiar();
+                    Solo_Lectura();
+                }
+                else
+                {
+                    _jefe.Nombres = txtNombre.Text;
+                    _jefe.Apellidos = txtApellidos.Text;
+                    _jefe.Dui = txtDui.Text;
+                    _jefe.Telefono = txtTelefono.Text;
+                    _jefe.Email = txtEmail.Text;
+                    _jefe.NomUsu = txtNomUsu.Text;
+                    _jefe.Pass = txtPass.Text;
+                    _jefe.Credencial = txtCredencial.Text;
+                    _jefe.IdJefeProyect = Convert.ToInt64(txtIdUsu.Text);
+
+                    _jefeBL.ModificarJefe(_jefe);
+                    string script = "alert('El jefe de proyecto se ha modificado exitosamente')";
+                    ScriptManager.RegisterStartupScript(this, typeof(Page), "Exito", script, true);
+                    Obtener();
+                    Limpiar();
+                    Solo_Lectura();
+                }
+            }
+            else
+            {
+                string script = "alert('Complete los datos correctamente')";
+                ScriptManager.RegisterStartupScript(this, typeof(Page), "Aceptar", script, true);
+            }
+        }
+
+        protected void btnEliminar_Click1(object sender, EventArgs e)
+        {
+            _admin.IdAdmin = Convert.ToInt64(txtIdUsu.Text);
+            _jefe.IdJefeProyect = Convert.ToInt64(txtIdUsu.Text);
+
+            if (txtCredencial.Text == "Administrador")
+            {
                 if (_admin.IdAdmin != 0)
                 {
-                    _adminBL.ModificarAdministrador(_admin);
+                    _adminBL.EliminarAdministracion(_admin.IdAdmin);
+                    string script = "alert('El donante se ha eliminado exitosamente')";
+                    ScriptManager.RegisterStartupScript(this, typeof(Page), "Exito", script, true);
                     Obtener();
                     Limpiar();
                     Solo_Lectura();
                 }
 
-
-
             }
-            else { }
-        }
-
-        protected void btnEliminar_Click1(object sender, EventArgs e)
-        {
-            _admin.IdAdmin = Convert.ToInt64(txtIdAdmin.Text);
-
-            if (_admin.IdAdmin != 0)
+            else
             {
-                _adminBL.EliminarAdministracion(_admin.IdAdmin);
-                Obtener();
-                Limpiar();
-                Solo_Lectura();
+                if (_jefe.IdJefeProyect != 0)
+                {
+                    _jefeBL.EliminarJefe(_jefe.IdJefeProyect);
+                    string script = "alert('El donante se ha eliminado exitosamente')";
+                    ScriptManager.RegisterStartupScript(this, typeof(Page), "Exito", script, true);
+                    Obtener();
+                    Limpiar();
+                    Solo_Lectura();
+                }
             }
         }
     }
