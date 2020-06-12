@@ -93,8 +93,31 @@ namespace PruebaSistema.Interfaz
             }
         }
 
+        protected void Button5_Click(object sender, EventArgs e)
+        {
+            string script = "alert('Se ha encontrado')";
+            ScriptManager.RegisterStartupScript(this, typeof(Page), "Exito", script, true);
+            if (txtCodigo.Text != "")
+            {
+                ProyectosEN Proyec = new ProyectosEN();
+
+                Proyec.IdProyecto = txtCodigo.Text;
 
 
+
+                txtCodigo.Text = "";
+
+
+                this.GridView1.DataSource = _ProyectoBL.buscarProyec(Proyec); ;
+                GridView1.DataBind();
+
+
+
+
+            }
+
+
+        }
 
 
 

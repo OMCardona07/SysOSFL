@@ -32,6 +32,12 @@ namespace SysOSFL.BL
             return DAL.ModificarProyecto(pProyecto);
 
         }
+        public List<ProyectosEN> buscarProyec(ProyectosEN pProyecto)
+        {
+
+            return DAL.BuscarProyectos(pProyecto);
+
+        }
 
 
     }

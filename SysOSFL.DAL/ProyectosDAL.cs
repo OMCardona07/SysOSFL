@@ -35,6 +35,38 @@ namespace SysOSFL.DAL
             _conn.Close();
             return resultado;
         }
+        public List<ProyectosEN> BuscarProyectos(ProyectosEN pProyecto)
+        {
+            List<ProyectosEN> _listaProyectosEN = new List<ProyectosEN>();
+            using (IDbConnection _conn = BDComun.ObtenerConexion())
+            {
+                _conn.Open();
+                IDbCommand commando = BDComun.ObtenerComandos(String.Format("select * from Proyecto where Codigo_Pro = '{0}'", pProyecto.IdProyecto), _conn);
+                IDataReader reader = commando.ExecuteReader();
+                while (reader.Read())
+                {
+                    ProyectosEN obj = new ProyectosEN();
+
+                    obj.NombreProyecto = reader.GetString(0);
+                    obj.TipoProyecto = reader.GetString(1);
+                    obj.IdProyecto = reader.GetString(2);
+                    obj.ProgresoProyecto = reader.GetString(3);
+
+
+                    _listaProyectosEN.Add(obj);
+
+
+
+                }
+                _conn.Close();
+                return _listaProyectosEN;
+            }
+        }
+
+
+
+
+
         public List<ProyectosEN> ObtenerProyectos()
         {
             List<ProyectosEN> _listaProyectosEN = new List<ProyectosEN>();
