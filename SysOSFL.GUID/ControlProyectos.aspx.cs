@@ -64,11 +64,8 @@ namespace PruebaSistema.Interfaz
             string script = "alert('Lista de proyectos')";
             ScriptManager.RegisterStartupScript(this, typeof(Page), "Exito", script, true);
 
-            // ProyectosEN Proyec = new ProyectosEN();
-            List<ProyectosEN> list = new List<ProyectosEN>();
-
-            _ProyectoBL.ObtenerPro();
-
+            this.GridView1.DataSource = _ProyectoBL.ObtenerPro();
+            GridView1.DataBind();
 
         }
 
