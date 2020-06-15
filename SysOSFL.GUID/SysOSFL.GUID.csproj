@@ -52,6 +52,7 @@
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
@@ -72,6 +73,7 @@
     <Content Include="CSS\estilos.css" />
     <Content Include="CSS\estilos1.css" />
     <Content Include="CSS\EstilosBuscar.css" />
+    <Content Include="CSS\EstilosLogIn.css" />
     <Content Include="CSS\EstilosRegistro.css" />
     <Content Include="CSS\EstilosRegistroUsu.css" />
     <Content Include="CSS\estilo_menuH.css" />
@@ -81,7 +83,11 @@
     <Content Include="GUID_Admin\RegistroJefe.aspx" />
     <Content Include="IMG\fondo-registro.jpg" />
     <Content Include="IMG\logo.svg" />
+    <Content Include="IndexAdmin.aspx" />
+    <Content Include="IndexDonante.aspx" />
+    <Content Include="IndexJefe.aspx" />
     <Content Include="JS\funcion.js" />
+    <Content Include="LogIn.aspx" />
     <Content Include="RegistroDondante.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -135,6 +141,34 @@
     <Compile Include="GUID_Admin\RegistroJefe.aspx.designer.cs">
       <DependentUpon>RegistroJefe.aspx</DependentUpon>
     </Compile>
+    <Compile Include="IndexAdmin.aspx.cs">
+      <DependentUpon>IndexAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="IndexAdmin.aspx.designer.cs">
+      <DependentUpon>IndexAdmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="IndexDonante.aspx.cs">
+      <DependentUpon>IndexDonante.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="IndexDonante.aspx.designer.cs">
+      <DependentUpon>IndexDonante.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="IndexJefe.aspx.cs">
+      <DependentUpon>IndexJefe.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="IndexJefe.aspx.designer.cs">
+      <DependentUpon>IndexJefe.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LogIn.aspx.cs">
+      <DependentUpon>LogIn.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LogIn.aspx.designer.cs">
+      <DependentUpon>LogIn.aspx</DependentUpon>
+    </Compile>
     <Compile Include="MasterMenu.Master.cs">
       <DependentUpon>MasterMenu.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -171,7 +205,9 @@
       <Name>SysOSFL.EN</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

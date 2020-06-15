@@ -62,6 +62,41 @@ namespace SysOSFL.DAL
             return resultado;
         }
 
+        public static int BuscarJefe(string pNomUsu, string pPass)
+        {
+            //List<Usuario> _Lista = new List<Usuario>();
+            int resultado;
+            using (IDbConnection _conn = BDComun.ObtenerConexion())
+            {
+                _conn.Open();
+                SqlCommand _comando = new SqlCommand("BuscarJefe", _conn as SqlConnection);
+                _comando.CommandType = CommandType.StoredProcedure;
+                _comando.Parameters.Add(new SqlParameter("@NomUsu", pNomUsu));
+                _comando.Parameters.Add(new SqlParameter("@Pass", pPass));
+                SqlDataReader _reader = _comando.ExecuteReader();
+
+                if (_reader.Read())
+                {
+                    resultado = 1;
+
+                    //Usuario _usuario = new Usuario();
+
+                    //_usuario.Id = _reader.GetInt64(0);
+                    //_usuario.Nombres = _reader.GetString(1);
+                    //_usuario.Apellidos = _reader.GetString(2);
+                    //_usuario.NomUsr = _reader.GetString(3);
+                    //_usuario.Clave = _reader.GetString(4);
+                    //_Lista.Add(_usuario);
+                }
+                else
+                {
+                    resultado = 0;
+                }
+                _conn.Close();
+            }
+            return resultado;
+        }
+
         public List<JefeProject> ObtenerJefeProyect()
         {
             List<JefeProject> _listaJefes = new List<JefeProject>();

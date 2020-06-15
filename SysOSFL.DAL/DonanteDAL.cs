@@ -16,7 +16,7 @@ namespace SysOSFL.DAL
             IDbConnection _conn = BDComun.ObtenerConexion();
             _conn.Open();
             IDbCommand comando = BDComun.ObtenerComandos(string.Format("INSERT INTO Donante(NombreEm,N_Emp,Email_E," +
-                "Telefono_E,NomUsu_E,Pass_E,Credencial_E)" +
+                "Telefono_E,NomUsu,Pass,Credencial_E)" +
                 " Values('{0}','{1}','{2}','{3}','{4}','{5}','{6}')",
                 pDonante.NombreEm, pDonante.Nrc, pDonante.Email, pDonante.Telefono, pDonante.NomUsu, pDonante.Pass, pDonante.Credencial), _conn);
             int resultado = comando.ExecuteNonQuery();
@@ -31,7 +31,7 @@ namespace SysOSFL.DAL
             {
                 conn.Open();
                 string _Sql = "UPDATE Donante SET NombreEm=@NombreEm,N_Emp=@N_Emp,Email_E=@Email_E," +
-                    " Telefono_E=@Telefono_E,NomUsu_E=@NomUsu_E,Pass_E=@Pass_E,Credencial_E=@Credencial_E WHERE IdDonante=@IdDonante";
+                    " Telefono_E=@Telefono_E,NomUsu=@NomUsu,Pass=@Pass,Credencial_E=@Credencial_E WHERE IdDonante=@IdDonante";
 
                 SqlCommand comando = new SqlCommand(_Sql, conn as SqlConnection);
                 comando.Parameters.AddWithValue("@IdDonante", pDonante.IdDonante);
@@ -39,8 +39,8 @@ namespace SysOSFL.DAL
                 comando.Parameters.AddWithValue("@N_Emp", pDonante.Nrc);
                 comando.Parameters.AddWithValue("@Email_E", pDonante.Email);
                 comando.Parameters.AddWithValue("@Telefono_E", pDonante.Telefono);
-                comando.Parameters.AddWithValue("@NomUsu_E", pDonante.NomUsu);
-                comando.Parameters.AddWithValue("@Pass_E", pDonante.Pass);
+                comando.Parameters.AddWithValue("@NomUsu", pDonante.NomUsu);
+                comando.Parameters.AddWithValue("@Pass", pDonante.Pass);
                 comando.Parameters.AddWithValue("@Credencial_E", pDonante.Credencial);
                 int resultado = comando.ExecuteNonQuery();
                 conn.Close();
@@ -58,6 +58,41 @@ namespace SysOSFL.DAL
                 , _conn);
             int resultado = comando.ExecuteNonQuery();
             _conn.Close();
+            return resultado;
+        }
+
+        public static int BuscarDonante(string pNomUsu, string pPass)
+        {
+            //List<Usuario> _Lista = new List<Usuario>();
+            int resultado;
+            using (IDbConnection _conn = BDComun.ObtenerConexion())
+            {
+                _conn.Open();
+                SqlCommand _comando = new SqlCommand("BuscarDonante", _conn as SqlConnection);
+                _comando.CommandType = CommandType.StoredProcedure;
+                _comando.Parameters.Add(new SqlParameter("@NomUsu", pNomUsu));
+                _comando.Parameters.Add(new SqlParameter("@Pass", pPass));
+                SqlDataReader _reader = _comando.ExecuteReader();
+
+                if (_reader.Read())
+                {
+                    resultado = 1;
+
+                    //Usuario _usuario = new Usuario();
+
+                    //_usuario.Id = _reader.GetInt64(0);
+                    //_usuario.Nombres = _reader.GetString(1);
+                    //_usuario.Apellidos = _reader.GetString(2);
+                    //_usuario.NomUsr = _reader.GetString(3);
+                    //_usuario.Clave = _reader.GetString(4);
+                    //_Lista.Add(_usuario);
+                }
+                else
+                {
+                    resultado = 0;
+                }
+                _conn.Close();
+            }
             return resultado;
         }
 

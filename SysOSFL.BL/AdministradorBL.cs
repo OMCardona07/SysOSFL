@@ -25,12 +25,16 @@ namespace SysOSFL.BL
         {
             return DAL.EliminarAdministrador(pId);
         }
+        public int BuscarAdmin(string pNomUsu, string pPass)
+        {
+            return AdministradorDAL.BuscarAdmin(pNomUsu, pPass);
+        }
 
         public List<Administrador> ObtenerTodosAdministracion()
         {
             return DAL.ObtenerAdministradores();
         }
-        
+
 
         public Administrador ObtenerAdministracionporId(Int64 pId)
         {
