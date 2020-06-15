@@ -70,6 +70,7 @@
     <Content Include="Administrar.aspx" />
     <Content Include="AdministrarDonante.aspx" />
     <Content Include="AgregarAdministrador.aspx" />
+    <Content Include="ControlProyectos.aspx" />
     <Content Include="CSS\estilos.css" />
     <Content Include="CSS\estilos1.css" />
     <Content Include="CSS\EstilosBuscar.css" />
@@ -112,6 +113,12 @@
     </Compile>
     <Compile Include="AgregarAdministrador.aspx.designer.cs">
       <DependentUpon>AgregarAdministrador.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ControlProyectos.aspx.cs">
+      <DependentUpon>ControlProyectos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ControlProyectos.aspx.designer.cs">
+      <DependentUpon>ControlProyectos.aspx</DependentUpon>
     </Compile>
     <Compile Include="GUID_Admin\ActualizacionAdmin.aspx.cs">
       <DependentUpon>ActualizacionAdmin.aspx</DependentUpon>

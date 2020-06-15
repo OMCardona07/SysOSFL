@@ -44,9 +44,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AdministradorBL.cs" />
+    <Compile Include="DonacionesBL.cs" />
     <Compile Include="DonanteBL.cs" />
     <Compile Include="JefeProyectBL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ProyectoBL.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SysOSFL.DAL\SysOSFL.DAL.csproj">
