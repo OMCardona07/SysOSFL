@@ -18,15 +18,18 @@ namespace SysOSFL.EN
 
         public String IdProyecto { get; set; }
         public string ProgresoProyecto { get; set; }
-
+        public string PresupuestoProyecto { get; set; }
+        public string JefeProyecto { get; set; }
         public ProyectosEN() { }
 
-        public ProyectosEN(String pIdProyecto, string pNombreProyecto, string pTipoProyecto, string pProgresoProyecto)
+        public ProyectosEN(String pIdProyecto, string pNombreProyecto, string pTipoProyecto, string pProgresoProyecto, string pPresupuestoProyecto, string pJefeProyecto)
         {
             IdProyecto = pIdProyecto;
             NombreProyecto = pNombreProyecto;
             TipoProyecto = pTipoProyecto;
             ProgresoProyecto = pProgresoProyecto;
+            PresupuestoProyecto = pPresupuestoProyecto;
+            JefeProyecto = pJefeProyecto;
         }
     }
 }

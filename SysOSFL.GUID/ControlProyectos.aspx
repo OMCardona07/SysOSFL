@@ -18,6 +18,14 @@
                     <p><label for="ProgresoProyecto">Progreso :</label></p>
                         <asp:TextBox ID="txtProgreso" runat="server"></asp:TextBox>
                <asp:Button ID="btn" Text="Hola" runat="server" />
+
+
+                         <p><label for="PresupuestoProyecto">Presupuesto :</label></p>
+                        <asp:TextBox ID="txtPresupuesto" runat="server"></asp:TextBox>
+
+                      <p><label for="JefeProyecto">Jefe Proyecto :</label></p>
+                        <asp:TextBox ID="txtJefe" runat="server"></asp:TextBox>
+
  
                     <p id="bot">
                         <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Guardar" />

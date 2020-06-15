@@ -23,13 +23,15 @@ namespace SysOSFL.GUID
         {
             string script = "alert('Se ha registrado exitosamente')";
             ScriptManager.RegisterStartupScript(this, typeof(Page), "Exito", script, true);
-            if (txtNombre_pro.Text != "" && txtTipo.Text != "" && txtCodigo.Text != "" && txtProgreso.Text != "")
+            if (txtNombre_pro.Text != "" && txtTipo.Text != "" && txtCodigo.Text != "" && txtProgreso.Text != "" && txtPresupuesto.Text != "" && txtJefe.Text != "")
             {
                 ProyectosEN Proyec = new ProyectosEN();
                 Proyec.NombreProyecto = txtNombre_pro.Text;
                 Proyec.TipoProyecto = txtTipo.Text;
                 Proyec.IdProyecto = txtCodigo.Text;
                 Proyec.ProgresoProyecto = txtProgreso.Text;
+                Proyec.PresupuestoProyecto = txtPresupuesto.Text;
+                Proyec.JefeProyecto = txtJefe.Text;
 
                 _ProyectoBL.AgregarPro(Proyec);
 
@@ -37,6 +39,8 @@ namespace SysOSFL.GUID
                 txtTipo.Text = "";
                 txtCodigo.Text = "";
                 txtProgreso.Text = "";
+                txtPresupuesto.Text = "";
+                txtJefe.Text = "";
             }
         }
 
@@ -69,13 +73,15 @@ namespace SysOSFL.GUID
         {
             string script = "alert('Se ha modificado exitosamente')";
             ScriptManager.RegisterStartupScript(this, typeof(Page), "Exito", script, true);
-            if (txtNombre_pro.Text != "" && txtTipo.Text != "" && txtCodigo.Text != "" && txtProgreso.Text != "")
+            if (txtNombre_pro.Text != "" && txtTipo.Text != "" && txtCodigo.Text != "" && txtProgreso.Text != "" && txtPresupuesto.Text != "" && txtJefe.Text != "")
             {
                 ProyectosEN Proyec = new ProyectosEN();
                 Proyec.NombreProyecto = txtNombre_pro.Text;
                 Proyec.TipoProyecto = txtTipo.Text;
                 Proyec.IdProyecto = txtCodigo.Text;
                 Proyec.ProgresoProyecto = txtProgreso.Text;
+                Proyec.PresupuestoProyecto = txtPresupuesto.Text;
+                Proyec.JefeProyecto = txtJefe.Text;
 
                 _ProyectoBL.ModificarPro(Proyec);
 
@@ -85,6 +91,8 @@ namespace SysOSFL.GUID
                 txtTipo.Text = "";
                 txtCodigo.Text = "";
                 txtProgreso.Text = "";
+                txtPresupuesto.Text = "";
+                txtJefe.Text = "";
 
             }
         }
@@ -108,4 +116,5 @@ namespace SysOSFL.GUID
                 GridView1.DataBind();
             }
     }
+}
 }
