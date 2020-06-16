@@ -53,6 +53,8 @@ namespace SysOSFL.DAL
                     obj.ProgresoProyecto = reader.GetString(3);
                     obj.PresupuestoProyecto = reader.GetString(4);
                     obj.JefeProyecto = reader.GetString(5);
+
+
                     _listaProyectosEN.Add(obj);
 
 
