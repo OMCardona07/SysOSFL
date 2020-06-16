@@ -44,10 +44,12 @@
   <ItemGroup>
     <Compile Include="AdministradorDAL.cs" />
     <Compile Include="BDComun.cs" />
+    <Compile Include="DonacionesDAL.cs" />
     <Compile Include="DonanteDAL.cs" />
     <Compile Include="JefeProyectDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ProyectosDAL.cs" />
+    <Compile Include="TareaDAL.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SysOSFL.EN\SysOSFL.EN.csproj">
