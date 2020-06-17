@@ -15,7 +15,7 @@ namespace SysOSFL.DAL
         {
             IDbConnection _conn = BDComun.ObtenerConexion();
             _conn.Open();
-            IDbCommand comando = BDComun.ObtenerComandos(string.Format("insert into Proyecto(Codigo_pro,Nombre,Tipo_pro,Presupuesto,Progreso_pro) Values('{0}','{1}','{2}','{3}','{4}')", pProyecto.Codigo_pro, pProyecto.NombreProyecto, pProyecto.TipoProyecto, pProyecto.PresupuestoProyecto, pProyecto.ProgresoProyecto, pProyecto.JefeProyecto)
+            IDbCommand comando = BDComun.ObtenerComandos(string.Format("insert into Proyecto(Codigo_pro,Nombre,Tipo_pro,Presupuesto,idJefe,Progreso_pro) Values('{0}','{1}','{2}','{3}','{4}','{5}')", pProyecto.Codigo_pro, pProyecto.NombreProyecto, pProyecto.TipoProyecto, pProyecto.PresupuestoProyecto, pProyecto.JefeProyecto, pProyecto.ProgresoProyecto)
                , _conn);
             int resultado = comando.ExecuteNonQuery();
 
@@ -52,7 +52,7 @@ namespace SysOSFL.DAL
                     obj.IdProyecto = Convert.ToInt64(reader.GetString(2));
                     obj.ProgresoProyecto = reader.GetString(3);
                     obj.PresupuestoProyecto = reader.GetString(4);
-                    obj.JefeProyecto = reader.GetString(5);
+                    obj.JefeProyecto = reader.GetInt32(5);
                     _listaProyectosEN.Add(obj);
 
 
@@ -80,7 +80,7 @@ namespace SysOSFL.DAL
                     obj.IdProyecto = Convert.ToInt64(reader.GetString(2));
                     obj.ProgresoProyecto = reader.GetString(3);
                     obj.PresupuestoProyecto = reader.GetString(4);
-                    obj.JefeProyecto = reader.GetString(5);
+                    obj.JefeProyecto = reader.GetInt32(5);
 
 
                     _listaProyectosEN.Add(obj);

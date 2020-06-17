@@ -19,10 +19,10 @@ namespace SysOSFL.EN
         public string TipoProyecto { get; set; }
         public string ProgresoProyecto { get; set; }
         public string PresupuestoProyecto { get; set; }
-        public string JefeProyecto { get; set; }
+        public Int32 JefeProyecto { get; set; }
         public ProyectosEN() { }
 
-        public ProyectosEN(Int64 pIdProyecto, string pCodigo, string pNombreProyecto, string pTipoProyecto, string pProgresoProyecto, string pPresupuestoProyecto, string pJefeProyecto)
+        public ProyectosEN(Int64 pIdProyecto, string pCodigo, string pNombreProyecto, string pTipoProyecto, string pProgresoProyecto, string pPresupuestoProyecto, int pJefeProyecto)
         {
             IdProyecto = pIdProyecto;
             Codigo_pro = pCodigo;
