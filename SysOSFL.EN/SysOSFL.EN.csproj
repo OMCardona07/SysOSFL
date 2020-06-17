@@ -48,6 +48,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Administrador.cs" />
+    <Compile Include="BitacorasEN.cs" />
     <Compile Include="Donaciones.cs" />
     <Compile Include="Donante.cs" />
     <Compile Include="JefeProject.cs" />

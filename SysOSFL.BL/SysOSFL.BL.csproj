@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AdministradorBL.cs" />
+    <Compile Include="BitacorasBL.cs" />
     <Compile Include="DonacionesBL.cs" />
     <Compile Include="DonanteBL.cs" />
     <Compile Include="JefeProyectBL.cs" />

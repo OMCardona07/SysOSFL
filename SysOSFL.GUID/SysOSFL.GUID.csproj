@@ -89,6 +89,7 @@
     <Content Include="IndexJefe.aspx" />
     <Content Include="JS\funcion.js" />
     <Content Include="LogIn.aspx" />
+    <Content Include="RegistroBitacoras.aspx" />
     <Content Include="RegistroDondante.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -185,6 +186,13 @@
       <DependentUpon>MasterMenu.Master</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RegistroBitacoras.aspx.cs">
+      <DependentUpon>RegistroBitacoras.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RegistroBitacoras.aspx.designer.cs">
+      <DependentUpon>RegistroBitacoras.aspx</DependentUpon>
+    </Compile>
     <Compile Include="RegistroDondante.aspx.cs">
       <DependentUpon>RegistroDondante.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
