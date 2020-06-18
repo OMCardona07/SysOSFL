@@ -69,6 +69,7 @@
   <ItemGroup>
     <Content Include="Administrar.aspx" />
     <Content Include="AdministrarDonante.aspx" />
+    <Content Include="AdministrarPro.aspx" />
     <Content Include="AgregarAdministrador.aspx" />
     <Content Include="ControlProyectos.aspx" />
     <Content Include="CSS\estilos.css" />
@@ -78,10 +79,6 @@
     <Content Include="CSS\EstilosRegistro.css" />
     <Content Include="CSS\EstilosRegistroUsu.css" />
     <Content Include="CSS\estilo_menuH.css" />
-    <Content Include="GUID_Admin\ActualizacionAdmin.aspx" />
-    <Content Include="GUID_Admin\RegistroAdmin.aspx" />
-    <Content Include="GUID_Admin\RegistroDonante.aspx" />
-    <Content Include="GUID_Admin\RegistroJefe.aspx" />
     <Content Include="IMG\fondo-registro.jpg" />
     <Content Include="IMG\logo.svg" />
     <Content Include="IndexAdmin.aspx" />
@@ -108,6 +105,13 @@
     <Compile Include="AdministrarDonante.aspx.designer.cs">
       <DependentUpon>AdministrarDonante.aspx</DependentUpon>
     </Compile>
+    <Compile Include="AdministrarPro.aspx.cs">
+      <DependentUpon>AdministrarPro.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdministrarPro.aspx.designer.cs">
+      <DependentUpon>AdministrarPro.aspx</DependentUpon>
+    </Compile>
     <Compile Include="AgregarAdministrador.aspx.cs">
       <DependentUpon>AgregarAdministrador.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -121,34 +125,6 @@
     </Compile>
     <Compile Include="ControlProyectos.aspx.designer.cs">
       <DependentUpon>ControlProyectos.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="GUID_Admin\ActualizacionAdmin.aspx.cs">
-      <DependentUpon>ActualizacionAdmin.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="GUID_Admin\ActualizacionAdmin.aspx.designer.cs">
-      <DependentUpon>ActualizacionAdmin.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="GUID_Admin\RegistroAdmin.aspx.cs">
-      <DependentUpon>RegistroAdmin.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="GUID_Admin\RegistroAdmin.aspx.designer.cs">
-      <DependentUpon>RegistroAdmin.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="GUID_Admin\RegistroDonante.aspx.cs">
-      <DependentUpon>RegistroDonante.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="GUID_Admin\RegistroDonante.aspx.designer.cs">
-      <DependentUpon>RegistroDonante.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="GUID_Admin\RegistroJefe.aspx.cs">
-      <DependentUpon>RegistroJefe.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="GUID_Admin\RegistroJefe.aspx.designer.cs">
-      <DependentUpon>RegistroJefe.aspx</DependentUpon>
     </Compile>
     <Compile Include="IndexAdmin.aspx.cs">
       <DependentUpon>IndexAdmin.aspx</DependentUpon>
@@ -223,6 +199,9 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="GUID_Admin\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -24,11 +24,11 @@ namespace SysOSFL.DAL
 
 
         }
-        public int Eliminarproyecto(ProyectosEN pProyecto)
+        public int Eliminarproyecto(Int64 IdPro)
         {
             IDbConnection _conn = BDComun.ObtenerConexion();
             _conn.Open();
-            IDbCommand comando = BDComun.ObtenerComandos(string.Format("delete from Proyecto where Codigo_Pro = '{0}'", pProyecto.IdProyecto)
+            IDbCommand comando = BDComun.ObtenerComandos(string.Format("delete from Proyecto where IdProyecto = '{0}'", IdPro)
                 , _conn);
 
             int resultado = comando.ExecuteNonQuery();
@@ -100,15 +100,19 @@ namespace SysOSFL.DAL
             using (IDbConnection conn = BDComun.ObtenerConexion())
             {
                 conn.Open();
-                string _Sql = "UPDATE Proyecto SET Nombre_Pro=@Nombre_Pro,Tipo_Pro=@Tipo_Pro,Codigo_Pro=@Codigo_Pro,Progreso_Pro=@Progreso_Pro,Presupuesto_Pro=@Presupuesto_Pro,Jefe_Pro=@Jefe_Pro WHERE Codigo_Pro=@Codigo_Pro";
+                string _Sql = "UPDATE Proyecto SET Codigo_Pro=@Codigo_Pro, Nombre=@Nombre," +
+                    "Tipo_pro=@Tipo_pro,Presupuesto=@Presupuesto,idJefe=@idJefe," +
+                    "Progreso_pro=@Progreso_pro WHERE IdProyecto=@IdProyecto";
 
                 SqlCommand comando = new SqlCommand(_Sql, conn as SqlConnection);
-                comando.Parameters.AddWithValue("@Nombre_Pro", pProyecto.NombreProyecto);
-                comando.Parameters.AddWithValue("@Tipo_Pro", pProyecto.TipoProyecto);
+                comando.Parameters.AddWithValue("@IdProyecto", pProyecto.PresupuestoProyecto);
                 comando.Parameters.AddWithValue("@Codigo_Pro", pProyecto.IdProyecto);
-                comando.Parameters.AddWithValue("@Progreso_Pro", pProyecto.ProgresoProyecto);
-                comando.Parameters.AddWithValue("@Presupuesto_Pro", pProyecto.PresupuestoProyecto);
-                comando.Parameters.AddWithValue("@Jefe_Pro", pProyecto.JefeProyecto);
+                comando.Parameters.AddWithValue("@Nombre", pProyecto.NombreProyecto);
+                comando.Parameters.AddWithValue("@Tipo_pro", pProyecto.TipoProyecto);
+                comando.Parameters.AddWithValue("@Presupuesto", pProyecto.ProgresoProyecto);
+                comando.Parameters.AddWithValue("@idJefe", pProyecto.JefeProyecto);
+                comando.Parameters.AddWithValue("@Progreso_pro", pProyecto.PresupuestoProyecto);
+
                 int resultado = comando.ExecuteNonQuery();
                 conn.Close();
                 return resultado;

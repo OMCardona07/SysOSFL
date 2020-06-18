@@ -7,7 +7,7 @@
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="Contenido" runat="server">
-    <link rel="stylesheet" type="text/css" href="CSS\EstilosRegistro.css"/>
+    <link href="../CSS/EstilosRegistro.css" rel="stylesheet" />
     <section class="form-registro">
         <h4>FORMULARIO REGISTRO</h4>
         <h3>* Campos obligatorios</h3>

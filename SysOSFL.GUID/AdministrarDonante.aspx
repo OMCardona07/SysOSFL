@@ -16,11 +16,11 @@
                     <asp:BoundColumn DataField="IdDonante" HeaderText="Id" />
                     <asp:BoundColumn DataField="NombreEm" HeaderText="Nombre de Institucion" />
                     <asp:BoundColumn DataField="N_Emp" HeaderText="N° de Identificacion" />
-                    <asp:BoundColumn DataField="Email_E" HeaderText="E-Mail" />
-                    <asp:BoundColumn DataField="Telefono_E" HeaderText="Telefono" />
-                    <asp:BoundColumn DataField="NomUsu_E" HeaderText="Nombre de Usuario" />
-                    <asp:BoundColumn DataField="Pass_E" HeaderText="Contraseña" />
-                    <asp:BoundColumn DataField="Credencial_E" HeaderText="Credencial" />
+                    <asp:BoundColumn DataField="Email" HeaderText="E-Mail" />
+                    <asp:BoundColumn DataField="Telefono" HeaderText="Telefono" />
+                    <asp:BoundColumn DataField="NomUsu" HeaderText="Nombre de Usuario" />
+                    <asp:BoundColumn DataField="Pass" HeaderText="Contraseña" />
+                    <asp:BoundColumn DataField="Credencial" HeaderText="Credencial" />
                     <asp:TemplateColumn>
                         <ItemTemplate>
                             <asp:Button ID="btnDetalles" runat="server" OnClick="btnDetalles_Click" Text="Ver Detalles" />

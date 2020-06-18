@@ -13,9 +13,7 @@ namespace SysOSFL.EN
     {
         public Int64 IdProyecto { get; set; }
         public string Codigo_pro { get; set; }
-
         public string NombreProyecto { get; set; }
-
         public string TipoProyecto { get; set; }
         public string ProgresoProyecto { get; set; }
         public string PresupuestoProyecto { get; set; }

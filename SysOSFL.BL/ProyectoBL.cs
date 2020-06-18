@@ -19,9 +19,9 @@ namespace SysOSFL.BL
             return DAL.AgregarProyecto(pProyecto);
         }
 
-        public int eliminarPro(ProyectosEN pProyecto)
+        public int eliminarPro(Int64 pId_pro)
         {
-            return DAL.Eliminarproyecto(pProyecto);
+            return DAL.Eliminarproyecto(pId_pro);
         }
         public List<ProyectosEN> ObtenerPro()
         {

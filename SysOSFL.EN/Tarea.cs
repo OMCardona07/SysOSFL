@@ -9,7 +9,7 @@ namespace SysOSFL.EN
     public class Tarea
     {
         public Int64 IdTarea { get; set; }
-        public string Id_pro { get; set; }
+        public Int32 Id_pro { get; set; }
         public string Nombre { get; set; }
         public string Descripcion { get; set; }
         public string Fecha_ini { get; set; }
@@ -19,7 +19,7 @@ namespace SysOSFL.EN
 
         public Tarea() { }
 
-        public Tarea(Int64 pIdTarea, string pId_pro, string pNombre, string pDescripcion, string pFechaIni,
+        public Tarea(Int64 pIdTarea, Int32 pId_pro, string pNombre, string pDescripcion, string pFechaIni,
             string pFechaFin, string pEstado)
         {
             IdTarea = pIdTarea;
