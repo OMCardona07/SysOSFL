@@ -45,7 +45,7 @@
         <asp:TextBox ID="txtNomUsu" runat="server" placeholder="Ingrese su nombre de usuario *" class="controles"></asp:TextBox>
         <asp:TextBox ID="txtPass" runat="server" placeholder="Ingrese su nombre de contraseña *" class="controles"></asp:TextBox>
         <asp:TextBox ID="txtCredencial" runat="server" class="controles" ReadOnly="true"></asp:TextBox>
-        <asp:Button class="btn" ID="btnModificar" runat="server" OnClick="btnModificar_Click" Text="Modificar" />
+        <asp:Button class="btn" ID="btnModificar" runat="server" OnClick="" Text="Modificar" />
         <asp:Button class="btn" ID="btnEliminar" runat="server" OnClick="btnEliminar_Click" Text="Eliminar" OnClientClick="return confirm(&quot;Realmente desea eliminar el registro&quot;);" />
 
     </section>

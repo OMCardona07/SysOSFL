@@ -220,7 +220,8 @@ namespace SysOSFL.GUID
                     string script = "alert('La Taear se ha modificado exitosamente')";
                     ScriptManager.RegisterStartupScript(this, typeof(Page), "Exito", script, true);
                     Obtener();
-                    Limpiar();
+                    txtNombre_ta.Text = Convert.ToString(_tarea.IdTarea); 
+                    //Limpiar();
                     Solo_Lectura();
                 }
 

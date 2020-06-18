@@ -54,11 +54,11 @@
                             <i class='bx bx-message-rounded nav__icon' ></i>
                             <span class="nav__text">Actualizar proyecto</span>
                         </a>
-                        <a href="#" class="nav__link">
+                        <a href="AgregarDonacion.aspx" class="nav__link">
                             <i class='bx bx-message-rounded nav__icon' ></i>
                             <span class="nav__text">Agregar Donaciones</span>
                         </a>
-                        <a href="#" class="nav__link active">
+                        <a href="AdministrarDonacion.aspx" class="nav__link active">
                             <i class='bx bx-grid-alt nav__icon'></i>
                             <span class="nav__text">Actualizar Donaciones</span>
                         </a>

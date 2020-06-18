@@ -68,9 +68,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Administrar.aspx" />
+    <Content Include="AdministrarDonacion.aspx" />
     <Content Include="AdministrarDonante.aspx" />
     <Content Include="AdministrarPro.aspx" />
     <Content Include="AgregarAdministrador.aspx" />
+    <Content Include="AgregarDonacion.aspx" />
     <Content Include="ControlProyectos.aspx" />
     <Content Include="CSS\estilos.css" />
     <Content Include="CSS\estilos1.css" />
@@ -98,6 +100,13 @@
     <Compile Include="Administrar.aspx.designer.cs">
       <DependentUpon>Administrar.aspx</DependentUpon>
     </Compile>
+    <Compile Include="AdministrarDonacion.aspx.cs">
+      <DependentUpon>AdministrarDonacion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdministrarDonacion.aspx.designer.cs">
+      <DependentUpon>AdministrarDonacion.aspx</DependentUpon>
+    </Compile>
     <Compile Include="AdministrarDonante.aspx.cs">
       <DependentUpon>AdministrarDonante.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -118,6 +127,13 @@
     </Compile>
     <Compile Include="AgregarAdministrador.aspx.designer.cs">
       <DependentUpon>AgregarAdministrador.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AgregarDonacion.aspx.cs">
+      <DependentUpon>AgregarDonacion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AgregarDonacion.aspx.designer.cs">
+      <DependentUpon>AgregarDonacion.aspx</DependentUpon>
     </Compile>
     <Compile Include="ControlProyectos.aspx.cs">
       <DependentUpon>ControlProyectos.aspx</DependentUpon>

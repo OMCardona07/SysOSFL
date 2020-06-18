@@ -15,9 +15,7 @@ namespace SysOSFL.DAL
         {
             IDbConnection _conn = BDComun.ObtenerConexion();
             _conn.Open();
-            IDbCommand comando = BDComun.ObtenerComandos(string.Format("INSERT INTO Donaciones(IdDonante,IdProyecto,Estado," +
-                " Values('{0}','{1}','{2}')",
-                pDonacion.IdDonante, pDonacion.IdProyecto, pDonacion.Estado), _conn);
+            IDbCommand comando = BDComun.ObtenerComandos(string.Format("INSERT INTO Donaciones(IdDonante,Id_pro,Monto,Estado)  Values('{0}','{1}','{2}','{3}')", pDonacion.IdDonante, pDonacion.IdProyecto, pDonacion.Monto, pDonacion.Estado), _conn);
             int resultado = comando.ExecuteNonQuery();
 
             _conn.Close();
@@ -29,14 +27,15 @@ namespace SysOSFL.DAL
             using (IDbConnection conn = BDComun.ObtenerConexion())
             {
                 conn.Open();
-                string _Sql = "UPDATE Donaciones SET IdDonante=@IdDonante, IdProyecto=@IdProyecto, Estado=@Estado" +
-                    "WHERE IdDonacion=@IdDonacion";
+                string _Sql = "UPDATE Donaciones SET IdDonante=@IdDonante,Id_pro=@Id_pro,Monto=@Monto," +
+                    " Estado=@Estado WHERE IdDonacion=@IdDonacion";
 
                 SqlCommand comando = new SqlCommand(_Sql, conn as SqlConnection);
                 comando.Parameters.AddWithValue("@IdDonacion", pDonacion.IdDonacion);
-                comando.Parameters.AddWithValue("@Nombres", pDonacion.IdDonante);
-                comando.Parameters.AddWithValue("@Apellidos", pDonacion.IdProyecto);
-                comando.Parameters.AddWithValue("@Dui", pDonacion.Estado);
+                comando.Parameters.AddWithValue("@IdDonante", pDonacion.IdDonante);
+                comando.Parameters.AddWithValue("@Id_pro", pDonacion.IdProyecto);
+                comando.Parameters.AddWithValue("@Monto", pDonacion.Monto);
+                comando.Parameters.AddWithValue("@Estado", pDonacion.Estado);
                 int resultado = comando.ExecuteNonQuery();
                 conn.Close();
                 return resultado;
