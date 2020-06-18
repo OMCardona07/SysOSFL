@@ -35,17 +35,27 @@
         <br />
         <br />
         <asp:TextBox ID="txtIdDonacion" runat="server" placeholder="Ingrese su Correo electronico" class="controles"></asp:TextBox>
+        <br />
+        <br />
         <asp:DropDownList ID="ddlDonante" runat="server" Height="30px" Width="250px" >
         </asp:DropDownList>
+        <br />
+        <br />
         <asp:DropDownList AutoPostBack="true" ID="ddlProyecto" runat="server" Height="30px" Width="250px" OnSelectedIndexChanged="ddlProyecto_SelectedIndexChanged" placeholder="--SELECCIONE UN PROYECTO--">
         </asp:DropDownList>
+        <br />
+        <br />
         <asp:TextBox ID="txtMonto" runat="server" placeholder="Ingrese su Correo electronico" class="controles"></asp:TextBox>
+        <br />
+        <br />
         <asp:DropDownList ID="ddlEstado" runat="server" Height="30px" Width="250px">
             <asp:ListItem Value="Select">--SELECCIONE UNA OPCION--</asp:ListItem>
             <asp:ListItem Value="En Espera">En Espera</asp:ListItem>
             <asp:ListItem Value="Aceptado">Aceptado</asp:ListItem>
             <asp:ListItem Value="Rechazado">Rechazado</asp:ListItem>
         </asp:DropDownList>
+        <br />
+        <br />
         <asp:Button class="btn" ID="btnModificar" runat="server" OnClick="btnModificar_Click" Text="Modificar" />
         <asp:Button class="btn" ID="btnEliminar" runat="server" OnClick="btnEliminar_Click" Text="Eliminar" OnClientClick="return confirm(&quot;Realmente desea eliminar el registro&quot;);" />
 

@@ -39,13 +39,13 @@
         <br />
         <asp:TextBox class="controles" ID="txtIdDonante" runat="server" placeholder="" ToolTip=""></asp:TextBox>
         <asp:TextBox class="controles" ID="txtNombreEm" runat="server" placeholder="Ingrese su nombre *" ToolTip=""></asp:TextBox>
-        <asp:TextBox ID="txtNrc" runat="server" placeholder="Ingrese su número de DUI *" class="controles"></asp:TextBox>
-        <asp:TextBox ID="txtEmail" runat="server" placeholder="Ingrese su Correo electronico" class="controles"></asp:TextBox>
-        <asp:TextBox ID="txtTelefono" runat="server" placeholder="Ingrese su número de telefono" class="controles"></asp:TextBox>
-        <asp:TextBox ID="txtNomUsu" runat="server" placeholder="Ingrese su nombre de usuario *" class="controles"></asp:TextBox>
-        <asp:TextBox ID="txtPass" runat="server" placeholder="Ingrese su nombre de contraseña *" class="controles"></asp:TextBox>
-        <asp:TextBox ID="txtCredencial" runat="server" class="controles" ReadOnly="true"></asp:TextBox>
-        <asp:Button class="btn" ID="btnModificar" runat="server" OnClick="" Text="Modificar" />
+        <asp:TextBox class="controles" ID="txtNrc" runat="server" placeholder="Ingrese su número de DUI *" ></asp:TextBox>
+        <asp:TextBox class="controles" ID="txtEmail" runat="server" placeholder="Ingrese su Correo electronico" ></asp:TextBox>
+        <asp:TextBox class="controles" ID="txtTelefono" runat="server" placeholder="Ingrese su número de telefono" ></asp:TextBox>
+        <asp:TextBox class="controles" ID="txtNomUsu" runat="server" placeholder="Ingrese su nombre de usuario *" ></asp:TextBox>
+        <asp:TextBox class="controles" ID="txtPass" runat="server" placeholder="Ingrese su nombre de contraseña *" ></asp:TextBox>
+        <asp:TextBox class="controles" ID="txtCredencial" runat="server" ReadOnly="true"></asp:TextBox>
+        <asp:Button class="btn" ID="btnModificar" runat="server" OnClick="btnModificar_Click" Text="Modificar" />
         <asp:Button class="btn" ID="btnEliminar" runat="server" OnClick="btnEliminar_Click" Text="Eliminar" OnClientClick="return confirm(&quot;Realmente desea eliminar el registro&quot;);" />
 
     </section>

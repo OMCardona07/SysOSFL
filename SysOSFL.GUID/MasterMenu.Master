@@ -50,7 +50,7 @@
                             <i class='bx bx-message-rounded nav__icon' ></i>
                             <span class="nav__text">Agregar Proyecto</span>
                         </a>
-                        <a href="AdministrarPro.aspx" class="nav__link">
+                        <a href="AdministrarProyecto.aspx" class="nav__link">
                             <i class='bx bx-message-rounded nav__icon' ></i>
                             <span class="nav__text">Actualizar proyecto</span>
                         </a>

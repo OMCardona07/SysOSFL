@@ -100,19 +100,17 @@ namespace SysOSFL.DAL
             using (IDbConnection conn = BDComun.ObtenerConexion())
             {
                 conn.Open();
-                string _Sql = "UPDATE Proyecto SET Codigo_Pro=@Codigo_Pro, Nombre=@Nombre," +
-                    "Tipo_pro=@Tipo_pro,Presupuesto=@Presupuesto,idJefe=@idJefe," +
-                    "Progreso_pro=@Progreso_pro WHERE IdProyecto=@IdProyecto";
+                string _Sql = "UPDATE Proyecto SET Codigo_pro=@Codigo_pro,Nombre=@Nombre,Tipo_pro=@Tipo_pro,Presupuesto=@Presupuesto," +
+                    " idJefe=@idJefe,Progreso_pro=@Progreso_pro WHERE IdProyecto=@IdProyecto";
 
                 SqlCommand comando = new SqlCommand(_Sql, conn as SqlConnection);
-                comando.Parameters.AddWithValue("@IdProyecto", pProyecto.PresupuestoProyecto);
-                comando.Parameters.AddWithValue("@Codigo_Pro", pProyecto.IdProyecto);
+                comando.Parameters.AddWithValue("@IdProyecto", pProyecto.IdProyecto);
+                comando.Parameters.AddWithValue("@Codigo_pro", pProyecto.Codigo_pro);
                 comando.Parameters.AddWithValue("@Nombre", pProyecto.NombreProyecto);
                 comando.Parameters.AddWithValue("@Tipo_pro", pProyecto.TipoProyecto);
-                comando.Parameters.AddWithValue("@Presupuesto", pProyecto.ProgresoProyecto);
+                comando.Parameters.AddWithValue("@Presupuesto", pProyecto.PresupuestoProyecto);
                 comando.Parameters.AddWithValue("@idJefe", pProyecto.JefeProyecto);
-                comando.Parameters.AddWithValue("@Progreso_pro", pProyecto.PresupuestoProyecto);
-
+                comando.Parameters.AddWithValue("@Progreso_pro", pProyecto.ProgresoProyecto);
                 int resultado = comando.ExecuteNonQuery();
                 conn.Close();
                 return resultado;

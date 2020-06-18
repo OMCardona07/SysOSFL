@@ -70,9 +70,11 @@
     <Content Include="Administrar.aspx" />
     <Content Include="AdministrarDonacion.aspx" />
     <Content Include="AdministrarDonante.aspx" />
-    <Content Include="AdministrarPro.aspx" />
+    <Content Include="AdministrarProyecto.aspx" />
+    <Content Include="AdministrarTarea.aspx" />
     <Content Include="AgregarAdministrador.aspx" />
     <Content Include="AgregarDonacion.aspx" />
+    <Content Include="AgregarTareas.aspx" />
     <Content Include="ControlProyectos.aspx" />
     <Content Include="CSS\estilos.css" />
     <Content Include="CSS\estilos1.css" />
@@ -114,12 +116,19 @@
     <Compile Include="AdministrarDonante.aspx.designer.cs">
       <DependentUpon>AdministrarDonante.aspx</DependentUpon>
     </Compile>
-    <Compile Include="AdministrarPro.aspx.cs">
-      <DependentUpon>AdministrarPro.aspx</DependentUpon>
+    <Compile Include="AdministrarProyecto.aspx.cs">
+      <DependentUpon>AdministrarProyecto.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="AdministrarPro.aspx.designer.cs">
-      <DependentUpon>AdministrarPro.aspx</DependentUpon>
+    <Compile Include="AdministrarProyecto.aspx.designer.cs">
+      <DependentUpon>AdministrarProyecto.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdministrarTarea.aspx.cs">
+      <DependentUpon>AdministrarTarea.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdministrarTarea.aspx.designer.cs">
+      <DependentUpon>AdministrarTarea.aspx</DependentUpon>
     </Compile>
     <Compile Include="AgregarAdministrador.aspx.cs">
       <DependentUpon>AgregarAdministrador.aspx</DependentUpon>
@@ -134,6 +143,13 @@
     </Compile>
     <Compile Include="AgregarDonacion.aspx.designer.cs">
       <DependentUpon>AgregarDonacion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AgregarTareas.aspx.cs">
+      <DependentUpon>AgregarTareas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AgregarTareas.aspx.designer.cs">
+      <DependentUpon>AgregarTareas.aspx</DependentUpon>
     </Compile>
     <Compile Include="ControlProyectos.aspx.cs">
       <DependentUpon>ControlProyectos.aspx</DependentUpon>

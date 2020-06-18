@@ -15,7 +15,7 @@ namespace SysOSFL.DAL
         {
             IDbConnection _conn = BDComun.ObtenerConexion();
             _conn.Open();
-            IDbCommand comando = BDComun.ObtenerComandos(string.Format("INSERT INTO Bitacora(Id_pro,Nombre,Descripcion," +
+            IDbCommand comando = BDComun.ObtenerComandos(string.Format("INSERT INTO Bitacora(Id_pro,Nombre_bi,Descripcion," +
                 "Fecha_ini,Fecha_fin,Estado)" +
                 " Values('{0}','{1}','{2}','{3}','{4}','{5}')",
                 pTarea.Id_pro, pTarea.Nombre, pTarea.Descripcion, pTarea.Fecha_ini, pTarea.Fecha_fin, pTarea.Estado), _conn);
@@ -30,13 +30,13 @@ namespace SysOSFL.DAL
             using (IDbConnection conn = BDComun.ObtenerConexion())
             {
                 conn.Open();
-                string _Sql = "UPDATE Bitacora SET Id_pro=@Id_pro,Nombre=@Nombre,Descripcion=@Descripcion,Fecha_ini=@Fecha_ini," +
+                string _Sql = "UPDATE Bitacora SET Id_pro=@Id_pro,Nombre_bi=@Nombre_bi,Descripcion=@Descripcion,Fecha_ini=@Fecha_ini," +
                     " Fecha_fin=@Fecha_fin,Estado=@Estado WHERE IdBitacora=@IdBitacora";
 
                 SqlCommand comando = new SqlCommand(_Sql, conn as SqlConnection);
                 comando.Parameters.AddWithValue("@IdBitacora", pTarea.IdTarea);
                 comando.Parameters.AddWithValue("@Id_pro", pTarea.Id_pro);
-                comando.Parameters.AddWithValue("@Nombre", pTarea.Nombre);
+                comando.Parameters.AddWithValue("@Nombre_bi", pTarea.Nombre);
                 comando.Parameters.AddWithValue("@Descripcion", pTarea.Descripcion);
                 comando.Parameters.AddWithValue("@Fecha_ini", pTarea.Fecha_ini);
                 comando.Parameters.AddWithValue("@Fecha_fin", pTarea.Fecha_fin);

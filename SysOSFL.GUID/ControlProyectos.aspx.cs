@@ -34,25 +34,7 @@ namespace SysOSFL.GUID
             }
         }
 
-        public void LlenarComboPro()
-        {
-            if (!this.IsPostBack)
-            {
-                {
-                    using (SqlCommand cmd = new SqlCommand("select IdProyecto, Nombre from Proyecto"))
-                    {
-                        cmd.CommandType = CommandType.Text;
-                        cmd.Connection = cn;
-                        cn.Open();
-                        ddlProyecto.DataSource = cmd.ExecuteReader();
-                        ddlProyecto.DataTextField = "Nombre";
-                        ddlProyecto.DataValueField = "IdProyecto";
-                        ddlProyecto.DataBind();
-                        cn.Close();
-                    }
-                }
-            }
-        }
+        
 
         JefeProyectBL _jefeBL = new JefeProyectBL();
         ProyectosEN _Proyecto = new ProyectosEN();
@@ -62,7 +44,6 @@ namespace SysOSFL.GUID
         protected void Page_Load(object sender, EventArgs e)
         {
             LlenarCombo();
-            LlenarComboPro();
         }
 
         protected void Button1_Click(object sender, EventArgs e)
@@ -102,109 +83,9 @@ namespace SysOSFL.GUID
             }
         }
 
-        protected void Button2_Click(object sender, EventArgs e)
+        protected void btnAgregarTarea_Click(object sender, EventArgs e)
         {
-            string script = "alert('Se ha eliminado exitosamente')";
-            ScriptManager.RegisterStartupScript(this, typeof(Page), "Exito", script, true);
-            if (txtCodigo.Text != "")
-            {
-                ProyectosEN Proyec = new ProyectosEN();
-
-                //Proyec.IdProyecto = txtCodigo.Text;
-                //_ProyectoBL.eliminarPro(Proyec);
-
-
-                txtCodigo.Text = "";
-            }
-        }
-
-        protected void Button3_Click(object sender, EventArgs e)
-        {
-            string script = "alert('Lista de proyectos')";
-            ScriptManager.RegisterStartupScript(this, typeof(Page), "Exito", script, true);
-
-            this.GridView1.DataSource = _ProyectoBL.ObtenerPro();
-            GridView1.DataBind();
-        }
-
-        protected void Button4_Click(object sender, EventArgs e)
-        {
-            string script = "alert('Se ha modificado exitosamente')";
-            ScriptManager.RegisterStartupScript(this, typeof(Page), "Exito", script, true);
-            if (txtNombre_pro.Text != "" && txtTipo.Text != "" && txtCodigo.Text != "" && txtProgreso.Text != "" && txtPresupuesto.Text != "")
-            {
-                ProyectosEN Proyec = new ProyectosEN();
-                Proyec.NombreProyecto = txtNombre_pro.Text;
-                Proyec.TipoProyecto = txtTipo.Text;
-                //Proyec.IdProyecto = txtCodigo.Text;
-                Proyec.ProgresoProyecto = txtProgreso.Text;
-                Proyec.PresupuestoProyecto = txtPresupuesto.Text;
-                //Proyec.JefeProyecto = txtJefe.Text;
-
-                _ProyectoBL.ModificarPro(Proyec);
-
-
-
-                txtNombre_pro.Text = "";
-                txtTipo.Text = "";
-                txtCodigo.Text = "";
-                txtProgreso.Text = "";
-                txtPresupuesto.Text = "";
-                //txtJefe.Text = "";
-
-            }
-        }
-
-        protected void Button5_Click(object sender, EventArgs e)
-        {
-            string script = "alert('Se ha encontrado')";
-            ScriptManager.RegisterStartupScript(this, typeof(Page), "Exito", script, true);
-            if (txtCodigo.Text != "")
-            {
-                ProyectosEN Proyec = new ProyectosEN();
-
-               /* Proyec.IdProyecto = txtCodigo.Text*/;
-
-
-
-                txtCodigo.Text = "";
-
-
-                this.GridView1.DataSource = _ProyectoBL.buscarProyec(Proyec); ;
-                GridView1.DataBind();
-            }
-    }
-
-        protected void btnGuardarPro_Click(object sender, EventArgs e)
-        {
-            if (txtNombre_ta.Text != "" && txtDesc.Text != "" && txtFechaIni.Text != "" &&
-                txtFechaFin.Text != "")
-            {
-                Tarea tarea = new Tarea();
-                tarea.Id_pro = Convert.ToInt32(ddlProyecto.SelectedValue);
-                tarea.Nombre = txtNombre_ta.Text;
-                tarea.Descripcion = txtDesc.Text;
-                tarea.Fecha_ini = txtFechaIni.Text;
-                tarea.Fecha_fin = txtFechaFin.Text;
-                tarea.Estado = ddlEstado.Text;
-
-
-
-                _tareaBL.AgregarTarea(tarea);
-                string script = "alert('Se ha registrado exitosamente')";
-                ScriptManager.RegisterStartupScript(this, typeof(Page), "Exito", script, true);
-
-                txtNombre_pro.Text = "";
-                txtTipo.Text = "";
-                txtCodigo.Text = "";
-                txtProgreso.Text = "";
-                txtPresupuesto.Text = "";
-            }
-            else
-            {
-                string script = "alert('El proyecto no se ha podido guardar')";
-                ScriptManager.RegisterStartupScript(this, typeof(Page), "Exito", script, true);
-            }
+            Response.Redirect("~/AgregarTareas.aspx");
         }
     }
 }
