@@ -7,7 +7,7 @@
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="Contenido" runat="server">
-    <link href="../CSS/EstilosRegistro.css" rel="stylesheet" />
+    <link href="../CSS/EstilosRegistroUsu.css" rel="stylesheet" />
     <section class="form-registro">
         <h4>FORMULARIO REGISTRO</h4>
         <h3>* Campos obligatorios</h3>
@@ -21,10 +21,11 @@
         <asp:TextBox ID="txtNomUsu" runat="server" placeholder="Ingrese su nombre de usuario *" class="controles"></asp:TextBox>
         <asp:TextBox ID="txtPass" runat="server" placeholder="Ingrese su nombre de contraseña *" class="controles" TextMode="Password"></asp:TextBox>
         <%--<input id="txtPass" type="password" placeholder="Ingrese su contraseña" class="controles"/>--%>
-        <asp:DropDownList ID="ddCredencial" runat="server" Height="24px" Width="177px">
+        <asp:DropDownList ID="ddCredencial" runat="server" Height="30px" Width="250px">
+            <asp:ListItem Value="Select">--SELECCIONE UNA CREDENCIAL</asp:ListItem>
             <asp:ListItem Value="Administador">Administrador</asp:ListItem>
             <asp:ListItem Value="Jefe de Proyecto">Jefe de Proyecto</asp:ListItem>
         </asp:DropDownList>
-        <asp:Button class="btn" ID="btnGuardar" runat="server" OnClick="btnGuardar_Click" Text="Guardar" />
+        <asp:Button class="btn" ID="btnGuardar" runat="server" OnClick="btnGuardar_Click" Text="GUARDAR" />
     </section>
 </asp:Content>

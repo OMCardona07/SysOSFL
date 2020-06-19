@@ -5,10 +5,11 @@
 
     <link rel="stylesheet" href="CSS\EstilosBuscar.css"/>
     <section class="form-registro">
+        <h4>ACTUALIZAR PROYECTOS</h4>
         <div>
-            <asp:Label Text="Codigo de proyecto" runat="server" />
-            <asp:TextBox Id="txtId" runat="server" />
-            <asp:Button Id="btnBuscar" runat="server" Text="Buscar" OnClick="btnBuscar_Click" />
+            <p><asp:Label Text="Codigo de proyecto" runat="server" /></p>
+            <asp:TextBox class="controles" Id="txtId" runat="server" />
+            <asp:Button class="btn" Id="btnBuscar" runat="server" Text="Buscar" OnClick="btnBuscar_Click" />
             <br />
             <br />
             <asp:Panel runat="server" ID="pnlUsuarios">
@@ -57,13 +58,14 @@
         <p><label for="">Jefe Proyecto :</label></p>
         <asp:DropDownList ID="ddlJefe" runat="server" Height="30px" Width="250px">
         </asp:DropDownList>
+        <br />
+        <br />
 
         <p><label for="">Progreso :</label></p>
         <asp:TextBox class="controles" ID="txtProgreso" runat="server"></asp:TextBox>
 
-        <asp:Button ID="btnModificar" runat="server" OnClick="btnModificar_Click" Text="Modificar" />
-        <asp:Button ID="btnEliminar" runat="server" OnClick="btnEliminar_Click" Text="Eliminar Proyecto" />
-        <asp:Button ID="btnAcTarea" runat="server" OnClick="btnAcTarea_Click" Text="Actualizar Tareas" />
+        <asp:Button class="btn" ID="btnModificar" runat="server" OnClick="btnModificar_Click" Text="MODIFICAR PROYECTO" />
+        <asp:Button class="btn" ID="btnAcTarea" runat="server" OnClick="btnAcTarea_Click" Text="ACTUALIZAR TAREAS" />
 
     </section>
 

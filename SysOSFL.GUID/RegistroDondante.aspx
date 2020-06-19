@@ -2,7 +2,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="Contenido" runat="server">
-    <link rel="stylesheet" type="text/css" href="CSS\EstilosRegistro.css"/>
+    <link rel="stylesheet" type="text/css" href="CSS\EstilosRegistroUsu.css"/>
     <section class="form-registro">
         <h4>REGISTRO DE DONANTES</h4>
         <h3>* Campos obligatorios</h3>
@@ -15,6 +15,6 @@
         <asp:TextBox ID="txtNomUsu" runat="server" placeholder="Ingrese su nombre de usuario *" class="controles"></asp:TextBox>
         <asp:TextBox ID="txtPass" runat="server" placeholder="Ingrese su nombre de contraseña *" class="controles" TextMode="Password"></asp:TextBox>
         <asp:TextBox ID="txtCredencial" runat="server" class="controles" ReadOnly="true"></asp:TextBox>
-        <asp:Button class="btn" ID="btnGuardar" runat="server" OnClick="btnGuardar_Click" Text="Guardar" />
+        <asp:Button class="btn" ID="btnGuardar" runat="server" OnClick="btnGuardar_Click" Text="GUARDAR" />
     </section>
 </asp:Content>

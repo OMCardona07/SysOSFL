@@ -5,9 +5,11 @@
     <link rel="stylesheet" href="CSS\EstilosBuscar.css"/>
     <section class="form-registro">
         <div>
-            <asp:Label Text="N° de identificacion" runat="server" />
-            <asp:TextBox Id="txtId" runat="server" />
-            <asp:Button Id="btnBuscar" runat="server" Text="Buscar" OnClick="btnBuscar_Click" />
+            <h4>ACTUALIZACION DE DATOS DEL DONANTE</h4>
+            <br />
+            <p><asp:Label Text="N° de identificacion" runat="server" /></p>            
+            <asp:TextBox class="controles" Id="txtId" runat="server" />
+            <asp:Button class="btn" Id="btnBuscar" runat="server" Text="Buscar" OnClick="btnBuscar_Click" />
             <br />
             <br />
             <asp:Panel runat="server" ID="pnlDonante">
@@ -45,8 +47,8 @@
         <asp:TextBox class="controles" ID="txtNomUsu" runat="server" placeholder="Ingrese su nombre de usuario *" ></asp:TextBox>
         <asp:TextBox class="controles" ID="txtPass" runat="server" placeholder="Ingrese su nombre de contraseña *" ></asp:TextBox>
         <asp:TextBox class="controles" ID="txtCredencial" runat="server" ReadOnly="true"></asp:TextBox>
-        <asp:Button class="btn" ID="btnModificar" runat="server" OnClick="btnModificar_Click" Text="Modificar" />
-        <asp:Button class="btn" ID="btnEliminar" runat="server" OnClick="btnEliminar_Click" Text="Eliminar" OnClientClick="return confirm(&quot;Realmente desea eliminar el registro&quot;);" />
+        <asp:Button class="btn" ID="btnModificar" runat="server" OnClick="btnModificar_Click" Text="MODIFICAR" />
+        <asp:Button class="btn" ID="btnEliminar" runat="server" OnClick="btnEliminar_Click" Text="ELIMINAR" OnClientClick="return confirm(&quot;Realmente desea eliminar el registro&quot;);" />
 
     </section>
 </asp:Content>

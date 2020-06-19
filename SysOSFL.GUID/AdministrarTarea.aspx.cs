@@ -38,6 +38,7 @@ namespace SysOSFL.GUID
                         ddlProyecto.DataValueField = "IdProyecto";
                         ddlProyecto.DataBind();
                         cn.Close();
+                        ddlProyecto.Items.Insert(0, "--SELECCIONE PROYECTO--");
                     }
                 }
             }

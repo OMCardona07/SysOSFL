@@ -4,10 +4,13 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="Contenido" runat="server">
     <link rel="stylesheet" href="CSS\EstilosBuscar.css"/>
     <section class="form-registro">
+        
         <div>
-            <asp:Label Text="N° de identificacion" runat="server" />
-            <asp:TextBox Id="txtId" runat="server" />
-            <asp:Button Id="btnBuscar" runat="server" Text="Buscar" OnClick="btnBuscar_Click" />
+            <h4>ACTUALIZACION DE DATOS DE DONACIONES</h4>
+            <br />
+            <p><asp:Label Text="N° de identificacion" runat="server" /></p>            
+            <asp:TextBox class="controles" Id="txtId" runat="server" />
+            <asp:Button class="btn" Id="btnBuscar" runat="server" Text="Buscar" OnClick="btnBuscar_Click" />
             <br />
             <br />
             <asp:Panel runat="server" ID="pnlDonante">
@@ -36,7 +39,6 @@
         <br />
         <asp:TextBox ID="txtIdDonacion" runat="server" placeholder="Ingrese su Correo electronico" class="controles"></asp:TextBox>
         <br />
-        <br />
         <asp:DropDownList ID="ddlDonante" runat="server" Height="30px" Width="250px" >
         </asp:DropDownList>
         <br />
@@ -47,7 +49,6 @@
         <br />
         <asp:TextBox ID="txtMonto" runat="server" placeholder="Ingrese su Correo electronico" class="controles"></asp:TextBox>
         <br />
-        <br />
         <asp:DropDownList ID="ddlEstado" runat="server" Height="30px" Width="250px">
             <asp:ListItem Value="Select">--SELECCIONE UNA OPCION--</asp:ListItem>
             <asp:ListItem Value="En Espera">En Espera</asp:ListItem>
@@ -56,8 +57,8 @@
         </asp:DropDownList>
         <br />
         <br />
-        <asp:Button class="btn" ID="btnModificar" runat="server" OnClick="btnModificar_Click" Text="Modificar" />
-        <asp:Button class="btn" ID="btnEliminar" runat="server" OnClick="btnEliminar_Click" Text="Eliminar" OnClientClick="return confirm(&quot;Realmente desea eliminar el registro&quot;);" />
+        <asp:Button class="btn" ID="btnModificar" runat="server" OnClick="btnModificar_Click" Text="MODIFICAR" />
+        <asp:Button class="btn" ID="btnEliminar" runat="server" OnClick="btnEliminar_Click" Text="ELIMINAR" OnClientClick="return confirm(&quot;Realmente desea eliminar el registro&quot;);" />
 
     </section>
 </asp:Content>

@@ -29,6 +29,7 @@ namespace SysOSFL.GUID
                         ddlJefe.DataValueField = "Id";
                         ddlJefe.DataBind();
                         cn.Close();
+                        ddlJefe.Items.Insert(0, "--SELECCIONE UN JEFE--");
                     }
                 }
             }

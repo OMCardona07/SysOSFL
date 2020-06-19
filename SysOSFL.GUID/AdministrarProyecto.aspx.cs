@@ -42,6 +42,7 @@ namespace SysOSFL.GUID
                         ddlJefe.DataValueField = "Id";
                         ddlJefe.DataBind();
                         cn.Close();
+                        ddlJefe.Items.Insert(0, "--SELECCIONE UN JEFE--");
                     }
                 }
             }
@@ -133,11 +134,6 @@ namespace SysOSFL.GUID
                 string script = "alert('Complete los datos correctamente')";
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Aceptar", script, true);
             }
-        }
-
-        protected void btnEliminar_Click(object sender, EventArgs e)
-        {
-
         }
 
         protected void btnAcTarea_Click(object sender, EventArgs e)

@@ -4,10 +4,11 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="Contenido" runat="server">
     <link rel="stylesheet" href="CSS\EstilosBuscar.css"/>
     <section class="form-registro">
+        <h4>ACTUALIZAR TAREAS</h4>
         <div>
-            <asp:Label Text="Codigo de proyecto" runat="server" />
-            <asp:TextBox Id="txtId" runat="server" />
-            <asp:Button Id="btnBuscar" runat="server" Text="Buscar" OnClick="btnBuscar_Click" />
+            <p><asp:Label Text="Codigo de proyecto" runat="server" /></p>            
+            <asp:TextBox class="controles" Id="txtId" runat="server" />
+            <asp:Button class="btn" Id="btnBuscar" runat="server" Text="Buscar" OnClick="btnBuscar_Click" />
             <br />
             <br />
             <asp:Panel runat="server" ID="Panel1">
@@ -35,16 +36,15 @@
         </asp:Panel>
         </div>
         <br />
-        <br />
 
-        <h4>ACTUALIZAR TAREAS</h4>
         <p><label for="">Id:</label></p>
         <asp:TextBox class="controles" ID="txtId_tar" runat="server"></asp:TextBox>
 
         <p><label for="">Proyecto:</label></p>
         <asp:DropDownList ID="ddlProyecto" runat="server" Height="30px" Width="250px">
         </asp:DropDownList>
-
+        <br />
+        <br />
         
         <p><label for="">Nombre:</label></p>
         <asp:TextBox class="controles" ID="txtNombre_ta" runat="server"></asp:TextBox>
@@ -58,14 +58,16 @@
 
         <p><label for="">Fecha de Finalizacion :</label></p>
         <asp:TextBox class="controles" ID="txtFechaFin" runat="server"></asp:TextBox>
+        <br />
 
         <asp:DropDownList ID="ddlEstado" runat="server" Height="30px" Width="250px">
+            <asp:ListItem Value="Select">--SELECCIONE UNA OPCION--</asp:ListItem>
             <asp:ListItem Value="En Espera">En Espera</asp:ListItem>
             <asp:ListItem Value="En Proceso">En Proceso</asp:ListItem>
             <asp:ListItem Value="Finalizado">Finalizado</asp:ListItem>
         </asp:DropDownList>
-
-        <asp:Button ID="btnModificar" runat="server" OnClick="btnModificar_Click" Text="Modificar Tarea" />
+        <br />
+        <asp:Button class="btn" ID="btnModificar" runat="server" OnClick="btnModificar_Click" Text="MODIFICAR TAREAS" />
     </section>
     
 </asp:Content>
