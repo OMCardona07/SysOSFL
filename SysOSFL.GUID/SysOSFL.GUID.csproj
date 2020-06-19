@@ -79,17 +79,22 @@
     <Content Include="CSS\estilos.css" />
     <Content Include="CSS\estilos1.css" />
     <Content Include="CSS\EstilosBuscar.css" />
+    <Content Include="CSS\EstilosIndex.css" />
     <Content Include="CSS\EstilosLogIn.css" />
     <Content Include="CSS\EstilosRegistro.css" />
     <Content Include="CSS\EstilosRegistroUsu.css" />
     <Content Include="CSS\estilo_menuH.css" />
+    <Content Include="Donaciones_d.aspx" />
+    <Content Include="IMG\curso.jpg" />
+    <Content Include="IMG\casa.jpg" />
     <Content Include="IMG\fondo-registro.jpg" />
     <Content Include="IMG\logo.svg" />
     <Content Include="IndexAdmin.aspx" />
-    <Content Include="IndexDonante.aspx" />
     <Content Include="IndexJefe.aspx" />
     <Content Include="JS\funcion.js" />
     <Content Include="LogIn.aspx" />
+    <Content Include="NProyectos.aspx" />
+    <Content Include="Quienes.aspx" />
     <Content Include="RegistroDondante.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -157,19 +162,19 @@
     <Compile Include="ControlProyectos.aspx.designer.cs">
       <DependentUpon>ControlProyectos.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Donaciones_d.aspx.cs">
+      <DependentUpon>Donaciones_d.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Donaciones_d.aspx.designer.cs">
+      <DependentUpon>Donaciones_d.aspx</DependentUpon>
+    </Compile>
     <Compile Include="IndexAdmin.aspx.cs">
       <DependentUpon>IndexAdmin.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="IndexAdmin.aspx.designer.cs">
       <DependentUpon>IndexAdmin.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="IndexDonante.aspx.cs">
-      <DependentUpon>IndexDonante.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="IndexDonante.aspx.designer.cs">
-      <DependentUpon>IndexDonante.aspx</DependentUpon>
     </Compile>
     <Compile Include="IndexJefe.aspx.cs">
       <DependentUpon>IndexJefe.aspx</DependentUpon>
@@ -206,7 +211,21 @@
     <Compile Include="MasterMenu.Master.designer.cs">
       <DependentUpon>MasterMenu.Master</DependentUpon>
     </Compile>
+    <Compile Include="NProyectos.aspx.cs">
+      <DependentUpon>NProyectos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NProyectos.aspx.designer.cs">
+      <DependentUpon>NProyectos.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Quienes.aspx.cs">
+      <DependentUpon>Quienes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Quienes.aspx.designer.cs">
+      <DependentUpon>Quienes.aspx</DependentUpon>
+    </Compile>
     <Compile Include="RegistroDondante.aspx.cs">
       <DependentUpon>RegistroDondante.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

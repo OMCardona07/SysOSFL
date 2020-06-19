@@ -11,7 +11,7 @@ namespace SysOSFL.GUID
 {
 
 
-    public partial class IndexDonante
+    public partial class Quienes
     {
     }
 }

@@ -44,6 +44,24 @@ namespace SysOSFL.DAL
 
         }
 
+        public static int ModificarDonacion_d(Donaciones pDonacion)
+        {
+            using (IDbConnection conn = BDComun.ObtenerConexion())
+            {
+                conn.Open();
+                string _Sql = "UPDATE Donaciones SET Estado=@Estado WHERE IdDonacion=@IdDonacion";
+
+                SqlCommand comando = new SqlCommand(_Sql, conn as SqlConnection);
+                comando.Parameters.AddWithValue("@IdDonacion", pDonacion.IdDonacion);
+                comando.Parameters.AddWithValue("@Estado", pDonacion.Estado);
+                int resultado = comando.ExecuteNonQuery();
+                conn.Close();
+                return resultado;
+            }
+
+
+        }
+
         public int EliminarDonacion(Int64 pIdDonacion)
         {
             IDbConnection _conn = BDComun.ObtenerConexion();

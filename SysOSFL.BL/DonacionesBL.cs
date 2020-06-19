@@ -20,6 +20,10 @@ namespace SysOSFL.BL
         {
             return DonacionesDAL.ModificarDonacion(pDonacion);
         }
+        public int ModificarDonacion_d(Donaciones pDonacion)
+        {
+            return DonacionesDAL.ModificarDonacion_d(pDonacion);
+        }
 
         public int EliminarDonacion(Int64 pId)
         {

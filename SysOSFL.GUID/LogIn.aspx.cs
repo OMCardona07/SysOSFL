@@ -54,7 +54,7 @@ namespace SysOSFL.GUID
             {
                 if (_donanteBL.BuscarDonante(txtNomUsu.Text, txtPass.Text) == 1)
                 {
-                    Response.Redirect("~/IndexDonante.aspx");
+                    Response.Redirect("~/Quienes.aspx");
                 }
                 else
                 {

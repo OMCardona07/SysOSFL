@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace SysOSFL.GUID
 {
-    public partial class IndexDonante : System.Web.UI.Page
+    public partial class NProyectos : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {

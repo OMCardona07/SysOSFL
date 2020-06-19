@@ -19,7 +19,7 @@
             <div class="l-navbar" id="navbar">
             <nav class="nav">
                 <div>
-                    <a href="#" class="nav__logo">
+                    <a href="Quienes.aspx" class="nav__logo">
                         <img src="IMG/logo.svg" alt="" class="nav__logo-icon">
                         <span class="nav__logo-text">INICIO</span>
                     </a>
@@ -29,43 +29,24 @@
                     </div>
     
                     <ul class="nav__list">
-                        <a href="AgregarAdministrador.aspx" class="nav__link">
-                            <i class='bx bx-user-plus nav__icon'></i>
-                            <span class="nav__text">Agregar Usuarios</span>
+                        <a href="Quienes.aspx" class="nav__link">
+                            <i class='bx bx-question-mark nav__icon'></i>
+                            <span class="nav__text">¿Quiénes somos?</span>
                         </a>
-                        <a href="Administrar.aspx" class="nav__link">
-                            <i class='bx bx-refresh nav__icon' ></i>
-                            <span class="nav__text">Actualizar Usuarios</span>
+                        <a href="Donaciones_d.aspx" class="nav__link">
+                            <i class='bx bx-buildings nav__icon' ></i>
+                            <span class="nav__text">Hacer Donaciones</span>
                         </a>
                         
-                        <a href="RegistroDondante.aspx" class="nav__link">
-                            <i class='bx bx-donate-heart nav__icon' ></i>
-                            <span class="nav__text">Agregar Donante</span>
+                        <a href="NProyectos.aspx" class="nav__link">
+                            <i class='bx bxs-image nav__icon' ></i>
+                            <span class="nav__text">Nuestos Proyectos</span>
                         </a>
-                        <a href="AdministrarDonante.aspx" class="nav__link">
-                            <i class='bx bx-revision nav__icon'></i>
-                            <span class="nav__text">Actualizar Donante</span>
-                        </a>
-                        <a href="ControlProyectos.aspx" class="nav__link">
-                            <i class='bx bx-layer-plus nav__icon'></i>
-                            <span class="nav__text">Agregar Proyecto</span>
-                        </a>
-                        <a href="AdministrarProyecto.aspx" class="nav__link">
-                            <i class='bx bx-repost nav__icon' ></i>
-                            <span class="nav__text">Actualizar proyecto</span>
-                        </a>
-                        <a href="AgregarDonacion.aspx" class="nav__link">
-                            <i class='bx bx-dollar-circle nav__icon' ></i>
-                            <span class="nav__text">Agregar Donaciones</span>
-                        </a>
-                        <a href="AdministrarDonacion.aspx" class="nav__link active">
-                            <i class='bx bx-sync nav__icon'></i>
-                            <span class="nav__text">Actualizar Donaciones</span>
-                        </a>
+                     
                     	                
                     </ul>
                 </div>
-                <a href="#" class="nav__link">           
+                <a href="LogIn.aspx" class="nav__link">           
                     <i class='bx bx-log-out-circle nav__icon'></i>
                     <span class="nav__text">Cerrar Sesión</span>
                 </a>
