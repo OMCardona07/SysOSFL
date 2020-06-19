@@ -78,15 +78,6 @@ namespace SysOSFL.DAL
                 if (_reader.Read())
                 {
                     resultado = 1;
-
-                    //Usuario _usuario = new Usuario();
-
-                    //_usuario.Id = _reader.GetInt64(0);
-                    //_usuario.Nombres = _reader.GetString(1);
-                    //_usuario.Apellidos = _reader.GetString(2);
-                    //_usuario.NomUsr = _reader.GetString(3);
-                    //_usuario.Clave = _reader.GetString(4);
-                    //_Lista.Add(_usuario);
                 }
                 else
                 {

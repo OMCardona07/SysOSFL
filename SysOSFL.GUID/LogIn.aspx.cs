@@ -39,12 +39,28 @@ namespace SysOSFL.GUID
 
             if (ddCredencial.SelectedIndex == 1)
             {
-
+                if (_jefeBL.BuscarJefe(txtNomUsu.Text, txtPass.Text) == 1)
+                {
+                    Response.Redirect("~/IndexJefe.aspx");
+                }
+                else
+                {
+                    string script = "alert('Complete los datos correctamente')";
+                    ScriptManager.RegisterStartupScript(this, typeof(Page), "Aceptar", script, true);
+                }
             }
 
             if (ddCredencial.SelectedIndex == 2)
             {
-
+                if (_donanteBL.BuscarDonante(txtNomUsu.Text, txtPass.Text) == 1)
+                {
+                    Response.Redirect("~/IndexDonante.aspx");
+                }
+                else
+                {
+                    string script = "alert('Complete los datos correctamente')";
+                    ScriptManager.RegisterStartupScript(this, typeof(Page), "Aceptar", script, true);
+                }
             }
         }
     }

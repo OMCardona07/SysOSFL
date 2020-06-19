@@ -25,7 +25,7 @@ namespace SysOSFL.GUID
             if (txtNombre.Text != "" && txtApellidos.Text != "" && txtDui.Text != "" 
                 && txtNomUsu.Text != "" && txtPass.Text != "")
             {
-                if (ddCredencial.SelectedIndex == 0)
+                if (ddCredencial.SelectedIndex == 1)
                 {
                     _admin.Nombres = txtNombre.Text;
                     _admin.Apellidos = txtApellidos.Text;
@@ -48,7 +48,7 @@ namespace SysOSFL.GUID
                     txtNomUsu.Text = "";
                     txtPass.Text = "";
                 }
-                else
+                if (ddCredencial.SelectedIndex == 2)
                 {
                     _jefe.Nombres = txtNombre.Text;
                     _jefe.Apellidos = txtApellidos.Text;

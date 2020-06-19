@@ -160,7 +160,7 @@ namespace SysOSFL.GUID
                 if (_admin.IdAdmin != 0)
                 {
                     _adminBL.EliminarAdministracion(_admin.IdAdmin);
-                    string script = "alert('El donante se ha eliminado exitosamente')";
+                    string script = "alert('El Administrador se ha eliminado exitosamente')";
                     ScriptManager.RegisterStartupScript(this, typeof(Page), "Exito", script, true);
                     Obtener();
                     Limpiar();
@@ -173,7 +173,7 @@ namespace SysOSFL.GUID
                 if (_jefe.IdJefeProyect != 0)
                 {
                     _jefeBL.EliminarJefe(_jefe.IdJefeProyect);
-                    string script = "alert('El donante No se ha eliminado')";
+                    string script = "alert('El Jefe de Proyecto se ha eliminado exitosamente')";
                     ScriptManager.RegisterStartupScript(this, typeof(Page), "Exito", script, true);
                     Obtener();
                     Limpiar();

@@ -25,6 +25,10 @@ namespace SysOSFL.BL
         {
             return DAL.EliminarDonante(pId);
         }
+        public int BuscarDonante(string pNomUsu, string pPass)
+        {
+            return DonanteDAL.BuscarDonante(pNomUsu, pPass);
+        }
 
         public List<Donante> ObtenerTodosDonantes()
         {

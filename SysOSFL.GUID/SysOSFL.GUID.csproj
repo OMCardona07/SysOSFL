@@ -185,6 +185,20 @@
     <Compile Include="LogIn.aspx.designer.cs">
       <DependentUpon>LogIn.aspx</DependentUpon>
     </Compile>
+    <Compile Include="MasterDonante.Master.cs">
+      <DependentUpon>MasterDonante.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterDonante.Master.designer.cs">
+      <DependentUpon>MasterDonante.Master</DependentUpon>
+    </Compile>
+    <Compile Include="MasterJefe.Master.cs">
+      <DependentUpon>MasterJefe.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterJefe.Master.designer.cs">
+      <DependentUpon>MasterJefe.Master</DependentUpon>
+    </Compile>
     <Compile Include="MasterMenu.Master.cs">
       <DependentUpon>MasterMenu.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -203,6 +217,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="MasterMenu.Master" />
+    <Content Include="MasterJefe.Master" />
+    <Content Include="MasterDonante.Master" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

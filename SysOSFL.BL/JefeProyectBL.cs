@@ -30,6 +30,10 @@ namespace SysOSFL.BL
         {
             return DAL.ObtenerJefeProyect();
         }
+        public int BuscarJefe(string pNomUsu, string pPass)
+        {
+            return JefeProyectDAL.BuscarJefe(pNomUsu, pPass);
+        }
 
 
         public JefeProject ObtenerJefesId(Int64 pId)
