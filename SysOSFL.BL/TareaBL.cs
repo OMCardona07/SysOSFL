@@ -20,6 +20,10 @@ namespace SysOSFL.BL
         {
             return TareaDAL.ModificarTarea(pTarea);
         }
+        public int ModificarTarea_J(Tarea pTarea)
+        {
+            return TareaDAL.ModificarTarea_J(pTarea);
+        }
 
         public int EliminarTarea(Int64 pId)
         {

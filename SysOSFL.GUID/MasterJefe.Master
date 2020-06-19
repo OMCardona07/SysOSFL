@@ -29,38 +29,9 @@
                     </div>
     
                     <ul class="nav__list">
-                        <a href="AgregarAdministrador.aspx" class="nav__link">
-                            <i class='bx bx-user-plus nav__icon'></i>
-                            <span class="nav__text">Agregar Usuarios</span>
-                        </a>
-                        <a href="Administrar.aspx" class="nav__link">
-                            <i class='bx bx-refresh nav__icon' ></i>
-                            <span class="nav__text">Actualizar Usuarios</span>
-                        </a>
-                        
-                        <a href="RegistroDondante.aspx" class="nav__link">
-                            <i class='bx bx-donate-heart nav__icon' ></i>
-                            <span class="nav__text">Agregar Donante</span>
-                        </a>
-                        <a href="AdministrarDonante.aspx" class="nav__link">
-                            <i class='bx bx-revision nav__icon'></i>
-                            <span class="nav__text">Actualizar Donante</span>
-                        </a>
-                        <a href="ControlProyectos.aspx" class="nav__link">
-                            <i class='bx bx-layer-plus nav__icon'></i>
-                            <span class="nav__text">Agregar Proyecto</span>
-                        </a>
-                        <a href="AdministrarProyecto.aspx" class="nav__link">
-                            <i class='bx bx-repost nav__icon' ></i>
-                            <span class="nav__text">Actualizar proyecto</span>
-                        </a>
-                        <a href="AgregarDonacion.aspx" class="nav__link">
-                            <i class='bx bx-dollar-circle nav__icon' ></i>
-                            <span class="nav__text">Agregar Donaciones</span>
-                        </a>
-                        <a href="AdministrarDonacion.aspx" class="nav__link active">
-                            <i class='bx bx-sync nav__icon'></i>
-                            <span class="nav__text">Actualizar Donaciones</span>
+                        <a href="Tareas_j.aspx" class="nav__link">
+                            <i class='bx bx-book-bookmark nav__icon' ></i>
+                            <span class="nav__text">Bitacora de proyecto</span>
                         </a>
                     	                
                     </ul>

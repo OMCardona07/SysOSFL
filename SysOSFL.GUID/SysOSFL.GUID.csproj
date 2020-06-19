@@ -96,6 +96,7 @@
     <Content Include="NProyectos.aspx" />
     <Content Include="Quienes.aspx" />
     <Content Include="RegistroDondante.aspx" />
+    <Content Include="Tareas_j.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -232,6 +233,13 @@
     </Compile>
     <Compile Include="RegistroDondante.aspx.designer.cs">
       <DependentUpon>RegistroDondante.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tareas_j.aspx.cs">
+      <DependentUpon>Tareas_j.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tareas_j.aspx.designer.cs">
+      <DependentUpon>Tareas_j.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

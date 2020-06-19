@@ -47,6 +47,22 @@ namespace SysOSFL.DAL
             }
         }
 
+        public static int ModificarTarea_J(Tarea pTarea)
+        {
+            using (IDbConnection conn = BDComun.ObtenerConexion())
+            {
+                conn.Open();
+                string _Sql = "UPDATE Bitacora SET Estado=@Estado WHERE IdBitacora=@IdBitacora";
+
+                SqlCommand comando = new SqlCommand(_Sql, conn as SqlConnection);
+                comando.Parameters.AddWithValue("@IdBitacora", pTarea.IdTarea);
+                comando.Parameters.AddWithValue("@Estado", pTarea.Estado);
+                int resultado = comando.ExecuteNonQuery();
+                conn.Close();
+                return resultado;
+            }
+        }
+
         public int EliminarTarea(Int64 pIdTarea)
         {
             IDbConnection _conn = BDComun.ObtenerConexion();

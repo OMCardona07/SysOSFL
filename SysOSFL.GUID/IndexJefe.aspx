@@ -4,6 +4,6 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="Contenido" runat="server">
     <section class="form-registro">
         <link href="CSS/EstilosLogIn.css" rel="stylesheet" />
-        <h4>BIENVENIDO JEFE DE PROYECTO</h4>
+        <h4>BIENVENIDO JEFE DE PROYECTO AL SISTEMA DE MANOS SOLIDARIAS</h4>
     </section>
 </asp:Content>
