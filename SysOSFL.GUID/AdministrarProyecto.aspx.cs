@@ -68,6 +68,7 @@ namespace SysOSFL.GUID
             txtPresupuesto.ReadOnly = true;
             txtProgreso.ReadOnly = true;
             txtId_pro.ReadOnly = true;
+            ddlJefe.Enabled = false;
         }
 
         ProyectosEN _pro = new ProyectosEN();
@@ -78,6 +79,7 @@ namespace SysOSFL.GUID
         protected void Page_Load(object sender, EventArgs e)
         {
             LlenarCombo();
+            Solo_Lectura();
         }
 
         protected void btnBuscar_Click(object sender, EventArgs e)
@@ -99,11 +101,13 @@ namespace SysOSFL.GUID
             txtProgreso.Text = dgProyectos.Items[rowind].Cells[6].Text;
             txtId_pro.Text = dgProyectos.Items[rowind].Cells[0].Text;
 
-            //txtCodigo.ReadOnly = false;
-            //txtNombre_pro.ReadOnly = false;
-            //txtTipo.ReadOnly = false;
-            //txtPresupuesto.ReadOnly = false;
-            //txtProgreso.ReadOnly = false;
+            
+            txtCodigo.ReadOnly = false;
+            txtNombre_pro.ReadOnly = false;
+            txtTipo.ReadOnly = false;
+            txtPresupuesto.ReadOnly = false;
+            txtProgreso.ReadOnly = false;
+            ddlJefe.Enabled = true;
         }
 
         protected void btnModificar_Click(object sender, EventArgs e)
@@ -124,8 +128,7 @@ namespace SysOSFL.GUID
                     string script = "alert('La Tarea se ha modificado exitosamente')";
                     ScriptManager.RegisterStartupScript(this, typeof(Page), "Exito", script, true);
                     Obtener();
-                    //txtCodigo.Text = Convert.ToString(_pro.IdProyecto);
-                    //Limpiar();
+                    Limpiar();
                     Solo_Lectura();
                 }
             }

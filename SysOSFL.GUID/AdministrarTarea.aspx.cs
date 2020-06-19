@@ -46,12 +46,22 @@ namespace SysOSFL.GUID
 
         private void Limpiar()
         {
-            
+            txtId_tar.Text = "";
+            txtNombre_ta.Text = "";
+            txtDesc.Text = "";
+            txtFechaIni.Text = "";
+            txtFechaFin.Text = "";
         }
 
         private void Solo_Lectura()
         {
-            
+            txtId_tar.ReadOnly = true;
+            txtNombre_ta.ReadOnly = true;
+            txtDesc.ReadOnly = true;
+            txtFechaIni.ReadOnly = true;
+            txtFechaFin.ReadOnly = true;
+            ddlProyecto.Enabled = false;
+            ddlEstado.Enabled = false;
         }
 
         public SqlConnection cn = new SqlConnection("Data Source =.; Initial Catalog = SysOSFL; Integrated Security = True");
@@ -61,6 +71,7 @@ namespace SysOSFL.GUID
         protected void Page_Load(object sender, EventArgs e)
         {
             LlenarCombo();
+            Solo_Lectura();
         }
 
         protected void btnModificar_Click(object sender, EventArgs e)
@@ -102,11 +113,12 @@ namespace SysOSFL.GUID
             txtFechaFin.Text = dgTareas.Items[rowind].Cells[5].Text;
             txtId_tar.Text = dgTareas.Items[rowind].Cells[0].Text;
 
-            //txtCodigo.ReadOnly = false;
-            //txtNombre_pro.ReadOnly = false;
-            //txtTipo.ReadOnly = false;
-            //txtPresupuesto.ReadOnly = false;
-            //txtProgreso.ReadOnly = false;
+            txtNombre_ta.ReadOnly = false;
+            txtDesc.ReadOnly = false;
+            txtFechaIni.ReadOnly = false;
+            txtFechaFin.ReadOnly = false;
+            ddlProyecto.Enabled = true;
+            ddlEstado.Enabled = true;
         }
 
         protected void btnBuscar_Click(object sender, EventArgs e)
@@ -114,6 +126,20 @@ namespace SysOSFL.GUID
             if (txtId.Text != "")
             {
                 Obtener();
+            }
+        }
+
+        protected void btnEliminar_Click(object sender, EventArgs e)
+        {
+            _tarea.IdTarea = Convert.ToInt64(txtId_tar.Text);
+            if (_tarea.IdTarea != 0)
+            {
+                _tareaBL.EliminarTarea(_tarea.IdTarea);
+                string script = "alert('El donante se ha eliminado exitosamente')";
+                ScriptManager.RegisterStartupScript(this, typeof(Page), "Exito", script, true);
+                Obtener();
+                Limpiar();
+                Solo_Lectura();
             }
         }
     }

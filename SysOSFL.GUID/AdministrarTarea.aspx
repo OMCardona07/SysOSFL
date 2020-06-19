@@ -67,7 +67,8 @@
             <asp:ListItem Value="Finalizado">Finalizado</asp:ListItem>
         </asp:DropDownList>
         <br />
-        <asp:Button class="btn" ID="btnModificar" runat="server" OnClick="btnModificar_Click" Text="MODIFICAR TAREAS" />
+        <asp:Button class="btn" ID="btnModificar" runat="server" OnClick="btnModificar_Click" Text="MODIFICAR TAREA" />
+        <asp:Button class="btn" ID="btnEliminar" runat="server" OnClick="btnEliminar_Click" Text="ELIMINAR TAREA" OnClientClick="return confirm(&quot;Realmente desea eliminar el registro&quot;);" />
     </section>
     
 </asp:Content>

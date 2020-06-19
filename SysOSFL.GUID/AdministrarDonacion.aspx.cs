@@ -65,6 +65,21 @@ namespace SysOSFL.GUID
             }
         }
 
+        private void Limpiar()
+        {
+            txtIdDonacion.Text = "";
+            txtMonto.Text = "";
+        }
+
+        private void Solo_Lectura()
+        {
+            txtIdDonacion.ReadOnly = true;
+            ddlDonante.Enabled = false;
+            ddlProyecto.Enabled = false;
+            txtMonto.ReadOnly = true;
+            ddlEstado.Enabled = false;
+        }
+
         public SqlConnection cn = new SqlConnection("Data Source =.; Initial Catalog = SysOSFL; Integrated Security = True");
         Donaciones _donacion = new Donaciones();
         DonacionesBL _donacionesBL = new DonacionesBL();
@@ -73,6 +88,7 @@ namespace SysOSFL.GUID
         {
             LlenarDonante();
             LlenarProyecto();
+            Solo_Lectura();
         }
 
         protected void btnBuscar_Click(object sender, EventArgs e)
@@ -92,12 +108,10 @@ namespace SysOSFL.GUID
             
             
 
-            //txtNombreEm.ReadOnly = false;
-            //txtNrc.ReadOnly = false;
-            //txtEmail.ReadOnly = false;
-            //txtTelefono.ReadOnly = false;
-            //txtNomUsu.ReadOnly = false;
-            //txtPass.ReadOnly = false;
+            ddlDonante.Enabled = true;
+            ddlProyecto.Enabled = true;
+            txtMonto.ReadOnly = false;
+            ddlEstado.Enabled = true;
         }
 
         protected void btnModificar_Click(object sender, EventArgs e)
@@ -116,15 +130,29 @@ namespace SysOSFL.GUID
                     string script = "alert('El donante se ha modificado exitosamente')";
                     ScriptManager.RegisterStartupScript(this, typeof(Page), "Exito", script, true);
                     Obtener();
-                    //Limpiar();
-                    //Solo_Lectura();
+                    Limpiar();
+                    Solo_Lectura();
                 }
             }
-            else { }
+            else 
+            {
+                string script = "alert('Llene correctamente los campos')";
+                ScriptManager.RegisterStartupScript(this, typeof(Page), "Exito", script, true);
+            }
         }
 
         protected void btnEliminar_Click(object sender, EventArgs e)
         {
+            _donacion.IdDonacion = Convert.ToInt64(txtIdDonacion.Text);
+            if (_donacion.IdDonacion != 0)
+            {
+                _donacionesBL.EliminarDonacion(_donacion.IdDonacion);
+                string script = "alert('El donante se ha eliminado exitosamente')";
+                ScriptManager.RegisterStartupScript(this, typeof(Page), "Exito", script, true);
+                Obtener();
+                Limpiar();
+                Solo_Lectura();
+            }
 
         }
 
@@ -149,6 +177,10 @@ namespace SysOSFL.GUID
 
                 conn.Close();
                 txtMonto.Text = itemId;
+                ddlDonante.Enabled = true;
+                ddlProyecto.Enabled = true;
+                txtMonto.ReadOnly = false;
+                ddlEstado.Enabled = true;
             }
         }
     }

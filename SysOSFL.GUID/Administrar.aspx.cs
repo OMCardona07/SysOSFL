@@ -173,7 +173,7 @@ namespace SysOSFL.GUID
                 if (_jefe.IdJefeProyect != 0)
                 {
                     _jefeBL.EliminarJefe(_jefe.IdJefeProyect);
-                    string script = "alert('El donante se ha eliminado exitosamente')";
+                    string script = "alert('El donante No se ha eliminado')";
                     ScriptManager.RegisterStartupScript(this, typeof(Page), "Exito", script, true);
                     Obtener();
                     Limpiar();

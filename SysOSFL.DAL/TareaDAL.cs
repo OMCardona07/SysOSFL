@@ -51,7 +51,7 @@ namespace SysOSFL.DAL
         {
             IDbConnection _conn = BDComun.ObtenerConexion();
             _conn.Open();
-            IDbCommand comando = BDComun.ObtenerComandos(string.Format("DELETE FROM Bitacora WHERE Id = {0}", pIdTarea)
+            IDbCommand comando = BDComun.ObtenerComandos(string.Format("DELETE FROM Bitacora WHERE IdBitacora = {0}", pIdTarea)
                 , _conn);
             int resultado = comando.ExecuteNonQuery();
             _conn.Close();

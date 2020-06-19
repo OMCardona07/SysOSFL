@@ -8,8 +8,8 @@
         <div>
             <h4>ACTUALIZACION DE DATOS DE DONACIONES</h4>
             <br />
-            <p><asp:Label Text="N° de identificacion" runat="server" /></p>            
-            <asp:TextBox class="controles" Id="txtId" runat="server" />
+            <p><asp:Label Text="Codigo de proyecto" runat="server" /></p>            
+            <asp:TextBox class="controles" Id="txtId" placeholder="Ingrese el codigo de proyecto" runat="server" />
             <asp:Button class="btn" Id="btnBuscar" runat="server" Text="Buscar" OnClick="btnBuscar_Click" />
             <br />
             <br />
@@ -37,7 +37,7 @@
         </div>
         <br />
         <br />
-        <asp:TextBox ID="txtIdDonacion" runat="server" placeholder="Ingrese su Correo electronico" class="controles"></asp:TextBox>
+        <asp:TextBox ID="txtIdDonacion" runat="server" placeholder="" class="controles"></asp:TextBox>
         <br />
         <asp:DropDownList ID="ddlDonante" runat="server" Height="30px" Width="250px" >
         </asp:DropDownList>
@@ -47,7 +47,7 @@
         </asp:DropDownList>
         <br />
         <br />
-        <asp:TextBox ID="txtMonto" runat="server" placeholder="Ingrese su Correo electronico" class="controles"></asp:TextBox>
+        <asp:TextBox ID="txtMonto" runat="server" placeholder="Monto de la donacion" class="controles"></asp:TextBox>
         <br />
         <asp:DropDownList ID="ddlEstado" runat="server" Height="30px" Width="250px">
             <asp:ListItem Value="Select">--SELECCIONE UNA OPCION--</asp:ListItem>
