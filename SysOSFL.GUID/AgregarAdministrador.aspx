@@ -23,7 +23,7 @@
         <%--<input id="txtPass" type="password" placeholder="Ingrese su contraseña" class="controles"/>--%>
         <asp:DropDownList ID="ddCredencial" runat="server" Height="30px" Width="250px">
             <asp:ListItem Value="Select">--SELECCIONE UNA CREDENCIAL</asp:ListItem>
-            <asp:ListItem Value="Administador">Administrador</asp:ListItem>
+            <asp:ListItem Value="Administrador">Administrador</asp:ListItem>
             <asp:ListItem Value="Jefe de Proyecto">Jefe de Proyecto</asp:ListItem>
         </asp:DropDownList>
         <asp:Button class="btn" ID="btnGuardar" runat="server" OnClick="btnGuardar_Click" Text="GUARDAR" />
